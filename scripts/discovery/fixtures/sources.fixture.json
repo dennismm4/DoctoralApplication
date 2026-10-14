@@ -1,0 +1,11 @@
+{
+  "$comment": "ILLUSTRATIVE FIXTURE registry — invented URLs used to test the pipeline offline.",
+  "sources": [
+    { "id": "fx-promising", "name": "[FIXTURE] Sustainable food systems scholarships", "provider": "Fixture", "category": "university-wide", "kind": "official", "enabled": true, "cadenceDays": 7, "urls": ["https://fixture.example/promising"], "linkedRecordIds": [], "knownConstraints": "", "status": "monitor" },
+    { "id": "fx-home", "name": "[FIXTURE] DTP with Home-fee-only funding", "provider": "Fixture", "category": "ukri-esrc-dtp", "kind": "official", "enabled": true, "cadenceDays": 7, "urls": ["https://fixture.example/home-fee-only"], "linkedRecordIds": [], "knownConstraints": "", "status": "monitor" },
+    { "id": "fx-list", "name": "[FIXTURE] Country-list scholarship", "provider": "Fixture", "category": "government", "kind": "official", "enabled": true, "cadenceDays": 7, "urls": ["https://fixture.example/country-list"], "linkedRecordIds": [], "knownConstraints": "", "status": "monitor" },
+    { "id": "fx-stale", "name": "[FIXTURE] Last year's award", "provider": "Fixture", "category": "university-wide", "kind": "official", "enabled": true, "cadenceDays": 7, "urls": ["https://fixture.example/stale"], "linkedRecordIds": [], "knownConstraints": "", "status": "monitor" },
+    { "id": "fx-restricted", "name": "[FIXTURE] UK-only studentship", "provider": "Fixture", "category": "university-wide", "kind": "official", "enabled": true, "cadenceDays": 7, "urls": ["https://fixture.example/restricted"], "linkedRecordIds": [], "knownConstraints": "", "status": "monitor" },
+    { "id": "fx-missing", "name": "[FIXTURE] Unreachable page", "provider": "Fixture", "category": "university-wide", "kind": "official", "enabled": true, "cadenceDays": 7, "urls": ["https://fixture.example/missing"], "linkedRecordIds": [], "knownConstraints": "", "status": "monitor" }
+  ]
+}

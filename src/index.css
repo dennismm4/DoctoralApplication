@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --color-paper: #f5f2ea;
+  --color-surface: #fffdf8;
+  --color-ink: #1b2422;
+  --color-muted: #59625f;
+  --color-line: #e2dccd;
+  --color-line-strong: #cfc7b4;
+
+  --color-forest: #1f3a34;
+  --color-forest-700: #2b4d45;
+  --color-forest-50: #e7eee9;
+  --color-ochre: #9a6f1c;
+  --color-ochre-50: #f6eedb;
+  --color-ok: #2c6a4c;
+  --color-ok-50: #e3f0e7;
+  --color-warn: #865d0f;
+  --color-warn-50: #fbf0d6;
+  --color-bad: #9a3b2e;
+  --color-bad-50: #f7e4df;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ochre);
+  outline-offset: 2px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.doc-editor {
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+@media print {
+  aside,
+  .no-print {
+    display: none !important;
+  }
+}

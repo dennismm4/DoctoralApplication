@@ -1,0 +1,2001 @@
+[
+  {
+    "recordType": "researched",
+    "selectionCriteria": [],
+    "department": "School for Business and Society; Department of Environment and Geography",
+    "programme": "PhD in Management; PhD in Environmental Economics and Environmental Management",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [
+      "Research Training Support Grant (WRDTP)"
+    ],
+    "extraCosts": {
+      "visa": "no",
+      "immigrationHealthSurcharge": "no",
+      "travel": "no",
+      "relocation": "no",
+      "dependants": "unknown",
+      "note": "The Leeds page for the same partnership states visas, IHS and flights are not covered."
+    },
+    "startNote": "Autumn 2027.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [
+      "Online PhD programme application",
+      "WRDTP draft application form (if the department requires it)",
+      "Final WRDTP application form (if shortlisted)"
+    ],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "yes",
+    "selectionStages": [
+      "Department shortlisting",
+      "Extra selection stage for international applicants",
+      "Department nomination",
+      "WRDTP decision"
+    ],
+    "competitionNote": "International awards are capped at 30% of the cohort.",
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [
+      "English-language requirement for the chosen department",
+      "Whether a research proposal is required",
+      "Whether an MSc in Project Management meets the +3.5 research-training requirement"
+    ],
+    "durationNote": "WRDTP +3.5 awards run 3.5 years; +3.75 and 1+3.5 routes exist. Confirm which applies to an MSc in Project Management.",
+    "country": "United Kingdom",
+    "id": "york-esrc-wrdtp-2027",
+    "title": "ESRC White Rose DTP studentship — Management or Environmental Economics & Environmental Management (University of York)",
+    "university": "University of York",
+    "subjects": [
+      "Management",
+      "Environmental Economics",
+      "Social Science"
+    ],
+    "themes": [
+      "management",
+      "sustainability",
+      "environmental economics",
+      "economics",
+      "social science",
+      "organisational sustainability",
+      "circular economy",
+      "climate resilience"
+    ],
+    "programmeUrl": "https://www.york.ac.uk/study/postgraduate-research/funding/esrc/",
+    "fundingUrl": "https://www.york.ac.uk/study/postgraduate-research/funding/esrc/",
+    "scholarshipName": "ESRC White Rose Doctoral Training Partnership (WRDTP) Studentship",
+    "fundingProvider": "Economic and Social Research Council (UKRI) via White Rose DTP",
+    "fundingModel": "dtp",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "yes",
+      "restrictedTo": null,
+      "note": "UK and international (EU and non-EU) students can apply. ESRC caps international awards at 30%, so departments run an extra selection stage for international applicants. Note: WRDTP states international students are not eligible for the separate WRDTP/Stuart Hall Foundation Awards — this record covers standard pathway awards."
+    },
+    "tuition": {
+      "coverage": "full-international",
+      "internationalFeeCoveredInFull": "yes",
+      "note": "York states a full fee waiver applied to international applicants as well as UK students."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": 21805,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": "2026/27",
+      "note": "2027/28 rates due in early 2027."
+    },
+    "durationYears": 3.5,
+    "deadline": {
+      "date": "2026-12-04",
+      "type": "internal",
+      "timezone": "Europe/London",
+      "note": "Earliest internal deadline (Management). Each department sets its own deadline before the WRDTP final form.",
+      "steps": [
+        {
+          "label": "York PhD application portal opens",
+          "date": "2026-10-01",
+          "type": "admissions"
+        },
+        {
+          "label": "Management & Social Policy internal deadline",
+          "date": "2026-12-04",
+          "type": "internal"
+        },
+        {
+          "label": "Environment & Geography internal deadline (12:00)",
+          "date": "2026-12-07T12:00:00Z",
+          "type": "internal"
+        },
+        {
+          "label": "Economics internal deadline",
+          "date": "2026-12-11",
+          "type": "internal"
+        },
+        {
+          "label": "Final WRDTP scholarship form (shortlisted only), 17:00 GMT",
+          "date": "2027-01-20T17:00:00Z",
+          "type": "scholarship"
+        },
+        {
+          "label": "Department nominations to WRDTP",
+          "date": "2027-02-24T17:00:00Z",
+          "type": "other"
+        },
+        {
+          "label": "Expected outcome (by)",
+          "date": "2027-04-23",
+          "type": "outcome"
+        }
+      ]
+    },
+    "startDate": "2027-10-01",
+    "entryRequirements": "Admission to an eligible York PhD programme by the departmental deadline; departmental entry requirements apply.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "University of York — ESRC studentships",
+        "url": "https://www.york.ac.uk/study/postgraduate-research/funding/esrc/"
+      },
+      {
+        "label": "University of Leeds — WRDTP 2027/28 (same partnership)",
+        "url": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28"
+      },
+      {
+        "label": "WRDTP — studentships",
+        "url": "https://wrdtp.ac.uk/studentships/"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "eligibility.international",
+        "claim": "UK and international (EU and non-EU) students can apply.",
+        "url": "https://www.york.ac.uk/study/postgraduate-research/funding/esrc/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "eligibility.ethiopian",
+        "claim": "No nationality restriction is stated; non-UK applicants of any nationality are eligible, so Ethiopian nationals qualify.",
+        "url": "https://www.york.ac.uk/study/postgraduate-research/funding/esrc/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "tuition",
+        "claim": "Full fee waiver applies to international applicants as well as UK students.",
+        "url": "https://www.york.ac.uk/study/postgraduate-research/funding/esrc/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "stipend",
+        "claim": "ESRC stipend £21,805 (2026/27 rate).",
+        "url": "https://www.york.ac.uk/study/postgraduate-research/funding/esrc/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "duration",
+        "claim": "WRDTP +3.5 studentships run 3.5 years full-time.",
+        "url": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "deadline",
+        "claim": "Management/Social Policy internal deadline 4 Dec 2026; final form 20 Jan 2027 17:00 GMT.",
+        "url": "https://www.york.ac.uk/study/postgraduate-research/funding/esrc/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "separateApplication",
+        "claim": "A WRDTP application form is required in addition to the PhD application.",
+        "url": "https://www.york.ac.uk/study/postgraduate-research/funding/esrc/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "All gate facts confirmed on York's official ESRC page. Food is not named as a pathway — a food-systems topic must sit within Management or Environmental Economics.",
+    "confidence": "high"
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [
+      {
+        "text": "A first or upper-second class honours degree, or equivalent",
+        "url": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28"
+      }
+    ],
+    "department": "Nominating Schools incl. Economics; Management and Organisations; Earth, Environment and Sustainability",
+    "programme": "PhD (via nominating School)",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [
+      "Research Training Support Grant"
+    ],
+    "extraCosts": {
+      "visa": "no",
+      "immigrationHealthSurcharge": "no",
+      "travel": "no",
+      "relocation": "no",
+      "dependants": "unknown",
+      "note": "Leeds explicitly states visas, IHS and flights are not covered."
+    },
+    "startNote": "1 Oct 2027 (+3.5/+3.75); Sept 2027 (1+3.5).",
+    "minimumDegree": "First or 2:1 equivalent",
+    "english": {
+      "requirement": "IELTS 6.0 overall, at least 5.5 in each component, within two years of start. Some Schools require more.",
+      "tests": [
+        "IELTS"
+      ]
+    },
+    "requiredDocuments": [
+      "PhD programme application (gives 9-digit Student Application ID)",
+      "ESRC WRDTP online application form"
+    ],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "yes",
+    "selectionStages": [
+      "Stage 1: PhD programme application",
+      "Stage 2: WRDTP online form",
+      "School nomination",
+      "WRDTP decision"
+    ],
+    "competitionNote": "Same partnership as York — international awards typically capped at 30%.",
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [
+      "Does Leeds waive the Home–International fee difference for WRDTP awardees? Ask the Leeds Doctoral College in writing.",
+      "Which WRDTP pathway fits food systems / supply chain research"
+    ],
+    "durationNote": "+3.5 = 3.5 years; +3.75 = 3 years 9 months; 1+3.5 = 4.5 years.",
+    "country": "United Kingdom",
+    "id": "leeds-esrc-wrdtp-2027",
+    "title": "ESRC White Rose DTP studentships 2027/28 (University of Leeds)",
+    "university": "University of Leeds",
+    "subjects": [
+      "Economics",
+      "Management",
+      "Sustainability",
+      "Social Science"
+    ],
+    "themes": [
+      "economics",
+      "management",
+      "sustainability",
+      "social science",
+      "supply chain management",
+      "food policy",
+      "climate resilience",
+      "organisational sustainability"
+    ],
+    "programmeUrl": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28",
+    "fundingUrl": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28",
+    "scholarshipName": "ESRC White Rose DTP Studentship",
+    "fundingProvider": "Economic and Social Research Council (UKRI) via White Rose DTP",
+    "fundingModel": "dtp",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "yes",
+      "restrictedTo": null,
+      "note": "Open to all applicants, Home or International (including EU)."
+    },
+    "tuition": {
+      "coverage": "home-plus-waiver",
+      "internationalFeeCoveredInFull": "unknown",
+      "note": "Leeds pays fees \"at standard UKRI rates\". UKRI states it \"only contributes up to the value of home fee rates\". Leeds does not state whether it waives the international difference."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": 21805,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": "2026/27",
+      "note": "Rises annually with the UKRI rate."
+    },
+    "durationYears": 3.5,
+    "deadline": {
+      "date": "2027-01-20T17:00:00Z",
+      "type": "scholarship",
+      "timezone": "Europe/London",
+      "note": "17:00 UK time. Leeds recommends submitting the PhD application by 6 Jan 2027.",
+      "steps": [
+        {
+          "label": "Recommended PhD admissions application",
+          "date": "2027-01-06",
+          "type": "admissions"
+        },
+        {
+          "label": "WRDTP scholarship form, 17:00 UK",
+          "date": "2027-01-20T17:00:00Z",
+          "type": "scholarship"
+        }
+      ]
+    },
+    "startDate": "2027-10-01",
+    "entryRequirements": "A first or upper-second class honours degree from a UK institution, or equivalent, plus the nominating School's requirements.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "University of Leeds — ESRC WRDTP 2027/28",
+        "url": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28"
+      },
+      {
+        "label": "UKRI — get a studentship",
+        "url": "https://www.ukri.org/what-we-do/developing-people-and-skills/find-studentships-and-doctoral-training/get-a-studentship-to-fund-your-doctorate/"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "eligibility.international",
+        "claim": "Open to all applicants, Home or International (including EU).",
+        "url": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "eligibility.ethiopian",
+        "claim": "No nationality restriction is stated; non-UK applicants of any nationality are eligible, so Ethiopian nationals qualify.",
+        "url": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "tuition",
+        "claim": "Fees paid at standard UKRI rates.",
+        "url": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "tuition",
+        "claim": "UKRI only contributes up to the value of home fee rates.",
+        "url": "https://www.ukri.org/what-we-do/developing-people-and-skills/find-studentships-and-doctoral-training/get-a-studentship-to-fund-your-doctorate/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher",
+        "quote": "UKRI only contributes up to the value of home fee rates"
+      },
+      {
+        "field": "stipend",
+        "claim": "Maintenance £21,805 full-time (2026/27).",
+        "url": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "duration",
+        "claim": "+3.5 awards run 3.5 years full-time.",
+        "url": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "deadline",
+        "claim": "WRDTP form deadline 17:00 UK time, 20 January 2027.",
+        "url": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "english",
+        "claim": "IELTS 6.0 overall, min 5.5 per component.",
+        "url": "https://phd.leeds.ac.uk/funding/470-esrc-white-rose-dtp-studentships-2027-28",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "Everything except international fee coverage is confirmed. This is the deciding question.",
+    "confidence": "medium"
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [
+      {
+        "text": "Outstanding intellectual ability",
+        "url": "https://www.gatescambridge.org/programme/the-scholarship/"
+      },
+      {
+        "text": "Reasons for choice of course",
+        "url": "https://www.gatescambridge.org/programme/the-scholarship/"
+      },
+      {
+        "text": "A commitment to improving the lives of others",
+        "url": "https://www.gatescambridge.org/programme/the-scholarship/"
+      },
+      {
+        "text": "Leadership potential",
+        "url": "https://www.gatescambridge.org/programme/the-scholarship/"
+      }
+    ],
+    "department": "Any department with a relevant PhD (e.g. Land Economy, Geography, Judge Business School)",
+    "programme": "Any full-time Cambridge PhD",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [
+      "Academic development funding £750–£4,000 (apply separately)",
+      "Discretionary Dependent Children Allowance",
+      "Hardship funding",
+      "Maintenance during fieldwork"
+    ],
+    "extraCosts": {
+      "visa": "yes",
+      "immigrationHealthSurcharge": "yes",
+      "travel": "yes",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Covers inbound visa costs, the IHS and one economy airfare at start and end. Child allowance is discretionary; no partner funding."
+    },
+    "startNote": "Michaelmas term 2027.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [
+      "Cambridge graduate application (with Gates Cambridge section)",
+      "References via the graduate application"
+    ],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "unknown",
+    "selectionStages": [
+      "Departmental ranking (Dec–Feb)",
+      "Shortlisting",
+      "Interview panel (22–23 Mar 2027)",
+      "Offer (early Apr 2027)"
+    ],
+    "competitionNote": "Highly competitive; awards split between US and International rounds.",
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [
+      "Choose a Cambridge PhD and confirm its funding deadline",
+      "Course English-language requirement",
+      "Whether the course requires a research proposal"
+    ],
+    "durationNote": "PhD awards run for up to 4 years.",
+    "country": "United Kingdom",
+    "id": "gates-cambridge-2027",
+    "title": "Gates Cambridge Scholarship — PhD at the University of Cambridge (International round, 2027 entry)",
+    "university": "University of Cambridge",
+    "subjects": [
+      "Any subject"
+    ],
+    "themes": [
+      "food security",
+      "food policy",
+      "agricultural economics",
+      "sustainability",
+      "management",
+      "supply chain management",
+      "climate resilience",
+      "economics"
+    ],
+    "programmeUrl": "https://www.postgraduate.study.cam.ac.uk/courses",
+    "fundingUrl": "https://www.gatescambridge.org/programme/the-scholarship/",
+    "scholarshipName": "Gates Cambridge Scholarship",
+    "fundingProvider": "Gates Cambridge Trust",
+    "fundingModel": "scholarship",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "yes",
+      "restrictedTo": null,
+      "note": "Open to applicants from countries outside the UK. Ethiopian applicants use the International (non-US) round."
+    },
+    "tuition": {
+      "coverage": "full-international",
+      "internationalFeeCoveredInFull": "yes",
+      "note": "University Composition Fee at the rate applicable to the student — the overseas rate for an Ethiopian applicant."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": 23152,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": "2026/27",
+      "note": "Single-student maintenance for 12 months."
+    },
+    "durationYears": 4,
+    "deadline": {
+      "date": "2026-12-08T23:59:00Z",
+      "type": "scholarship",
+      "timezone": "Europe/London",
+      "note": "Course funding deadline is 8 Dec 2026 or 6 Jan 2027 (11:59pm UK), depending on the course. Check the Course Directory. The earlier date is shown to be safe.",
+      "steps": [
+        {
+          "label": "Applications opened",
+          "date": "2026-09-11",
+          "type": "admissions"
+        },
+        {
+          "label": "Course funding deadline (some courses)",
+          "date": "2026-12-08T23:59:00Z",
+          "type": "scholarship"
+        },
+        {
+          "label": "Course funding deadline (other courses)",
+          "date": "2027-01-06T23:59:00Z",
+          "type": "scholarship"
+        },
+        {
+          "label": "Shortlist outcome notified",
+          "date": "2027-03-08T23:59:00Z",
+          "type": "outcome"
+        },
+        {
+          "label": "Interview panels",
+          "date": "2027-03-22",
+          "type": "interview"
+        },
+        {
+          "label": "Offers (early April)",
+          "date": "2027-04-01",
+          "type": "outcome"
+        }
+      ]
+    },
+    "startDate": "2027-10-01",
+    "entryRequirements": "Admission to a Cambridge PhD. Selection weighs intellectual ability, reasons for course choice, commitment to improving others' lives, and leadership potential.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "Gates Cambridge — The scholarship",
+        "url": "https://www.gatescambridge.org/programme/the-scholarship/"
+      },
+      {
+        "label": "Gates Cambridge — Timeline",
+        "url": "https://www.gatescambridge.org/apply/timeline/"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "eligibility.international",
+        "claim": "Scholarships for outstanding applicants from countries outside the UK.",
+        "url": "https://www.gatescambridge.org/programme/the-scholarship/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "eligibility.ethiopian",
+        "claim": "No nationality restriction is stated; non-UK applicants of any nationality are eligible, so Ethiopian nationals qualify.",
+        "url": "https://www.gatescambridge.org/programme/the-scholarship/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "tuition",
+        "claim": "Covers the University Composition Fee at the applicable rate.",
+        "url": "https://www.gatescambridge.org/programme/the-scholarship/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "stipend",
+        "claim": "Maintenance £23,152 for 12 months (2026-27 rate).",
+        "url": "https://www.gatescambridge.org/programme/the-scholarship/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "duration",
+        "claim": "PhD awards run for up to 4 years.",
+        "url": "https://www.gatescambridge.org/programme/the-scholarship/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "deadline",
+        "claim": "Non-US deadline is 8 Dec 2026 or 6 Jan 2027 depending on course (11:59pm UK).",
+        "url": "https://www.gatescambridge.org/apply/timeline/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "All gate facts confirmed on Gates Cambridge pages. English and entry requirements depend on the specific Cambridge course.",
+    "confidence": "high"
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [
+      {
+        "text": "Academic ability",
+        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+      },
+      {
+        "text": "Research potential",
+        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+      },
+      {
+        "text": "Examination results",
+        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+      },
+      {
+        "text": "References",
+        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+      }
+    ],
+    "department": "Any of the eligible courses (114 listed)",
+    "programme": "Eligible Cambridge PhD",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "yes",
+      "immigrationHealthSurcharge": "yes",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Student visa cost and the IHS are listed as covered."
+    },
+    "startNote": "2027/28.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "no",
+    "selectionStages": [
+      "Departmental ranking",
+      "Trust selection (mid-Feb to end of July 2027)"
+    ],
+    "competitionNote": "About 60 awards.",
+    "firstListed": "2026-10-14",
+    "discrepancies": [
+      {
+        "id": "ct-need",
+        "description": "The fund page says an applicant's financial situation \"does not affect selection\" but also lists financial need as a basis of award.",
+        "urls": [
+          "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+        ],
+        "resolved": false
+      }
+    ],
+    "outstanding": [
+      "Maintenance amount for 2027/28",
+      "Funded duration",
+      "Whether her chosen course is one of the 114 eligible courses",
+      "Resolve the financial-need contradiction with Cambridge.Trust@admin.cam.ac.uk"
+    ],
+    "durationNote": "Tied to course length; up to 6 further months of maintenance for writing up, on application.",
+    "country": "United Kingdom",
+    "id": "cambridge-trust-international-2027",
+    "title": "Cambridge Trust International Scholarship — PhD (2027/28)",
+    "university": "University of Cambridge",
+    "subjects": [
+      "Any eligible subject"
+    ],
+    "themes": [
+      "food security",
+      "food policy",
+      "agricultural economics",
+      "sustainability",
+      "management",
+      "economics",
+      "climate resilience"
+    ],
+    "programmeUrl": "https://www.postgraduate.study.cam.ac.uk/courses",
+    "fundingUrl": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026",
+    "scholarshipName": "Cambridge Trust International Scholarship",
+    "fundingProvider": "Cambridge Trust",
+    "fundingModel": "scholarship",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "yes",
+      "restrictedTo": null,
+      "note": "Applicants from countries other than the UK or Ireland, with Overseas fee status, ranked highly by their prospective department."
+    },
+    "tuition": {
+      "coverage": "full-international",
+      "internationalFeeCoveredInFull": "yes",
+      "note": "Award purposes listed as \"Fees (International)\" and \"Maintenance\"."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": null,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": null,
+      "note": "Maintenance is included but the amount is not stated on the fund page."
+    },
+    "durationYears": null,
+    "deadline": {
+      "date": "2026-12-08T23:59:00Z",
+      "type": "scholarship",
+      "timezone": "Europe/London",
+      "note": "The application deadline is the funding deadline of your course — 8 Dec 2026 or 6 Jan 2027 for most Cambridge courses.",
+      "steps": [
+        {
+          "label": "Course funding deadline (some courses)",
+          "date": "2026-12-08T23:59:00Z",
+          "type": "scholarship"
+        },
+        {
+          "label": "Course funding deadline (other courses)",
+          "date": "2027-01-06T23:59:00Z",
+          "type": "scholarship"
+        },
+        {
+          "label": "Awards made",
+          "date": "2027-02-15",
+          "type": "outcome"
+        },
+        {
+          "label": "Assume unsuccessful if no news by",
+          "date": "2027-07-31",
+          "type": "outcome"
+        }
+      ]
+    },
+    "startDate": "2027-10-01",
+    "entryRequirements": "Admission to an eligible Cambridge PhD; selection on academic ability, research potential, exam results and references.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "Cambridge student funding — Cambridge Trust International Scholarship 2027/28",
+        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+      },
+      {
+        "label": "Gates Cambridge timeline (course funding deadlines)",
+        "url": "https://www.gatescambridge.org/apply/timeline/"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "eligibility.international",
+        "claim": "Applicants from countries other than the UK or Ireland with Overseas fee status.",
+        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "eligibility.ethiopian",
+        "claim": "No nationality restriction is stated; non-UK applicants of any nationality are eligible, so Ethiopian nationals qualify.",
+        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "tuition",
+        "claim": "Award covers \"Fees (International)\".",
+        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher",
+        "quote": "Fees (International)"
+      },
+      {
+        "field": "stipend",
+        "claim": "Award covers \"Maintenance\" (amount not stated).",
+        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "deadline",
+        "claim": "Application deadline is the same as the course funding deadline.",
+        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "deadline",
+        "claim": "Cambridge course funding deadlines: 8 Dec 2026 or 6 Jan 2027.",
+        "url": "https://www.gatescambridge.org/apply/timeline/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "separateApplication",
+        "claim": "No additional questions in the Applicant Portal — considered via the course application.",
+        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "Fees and maintenance confirmed; maintenance amount and duration not stated. One internal contradiction flagged.",
+    "confidence": "medium"
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [
+      {
+        "text": "Academic merit and potential",
+        "url": "https://www.ox.ac.uk/clarendon"
+      }
+    ],
+    "department": "Any department (e.g. Saïd Business School, Department of International Development, School of Geography and the Environment)",
+    "programme": "Any eligible full- or part-time DPhil",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "Michaelmas term 2027.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "no",
+    "selectionStages": [],
+    "competitionNote": "Highly competitive.",
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [
+      "Living grant amount for 2027-28",
+      "Exact December/January deadline for the chosen DPhil",
+      "Course English requirement"
+    ],
+    "durationNote": "For the period of fee liability of the course.",
+    "country": "United Kingdom",
+    "id": "clarendon-2027",
+    "title": "Clarendon Scholarship — DPhil at the University of Oxford (2027-28)",
+    "university": "University of Oxford",
+    "subjects": [
+      "Any subject"
+    ],
+    "themes": [
+      "management",
+      "food security",
+      "food policy",
+      "sustainability",
+      "economics",
+      "agricultural economics",
+      "climate resilience",
+      "supply chain management"
+    ],
+    "programmeUrl": "https://www.ox.ac.uk/admissions/graduate/courses",
+    "fundingUrl": "https://www.ox.ac.uk/clarendon",
+    "scholarshipName": "Clarendon Scholarship",
+    "fundingProvider": "Clarendon Fund, University of Oxford",
+    "fundingModel": "scholarship",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "yes",
+      "restrictedTo": null,
+      "note": "No restriction on nationality, ordinary residence or field of study."
+    },
+    "tuition": {
+      "coverage": "full-international",
+      "internationalFeeCoveredInFull": "yes",
+      "note": "Covers course fees for the period of fee liability."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": null,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": null,
+      "note": "A grant for living expenses is included; the amount is not stated on the page reviewed."
+    },
+    "durationYears": null,
+    "deadline": {
+      "date": null,
+      "type": null,
+      "timezone": "Europe/London",
+      "note": "Automatically considered if you apply by the December or January course deadline relevant to your DPhil. Exact 2027-28 dates are set per course.",
+      "steps": []
+    },
+    "startDate": "2027-10-01",
+    "entryRequirements": "Admission to an eligible Oxford DPhil; selection on academic merit and potential.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "University of Oxford — Clarendon Fund",
+        "url": "https://www.ox.ac.uk/clarendon"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "eligibility.international",
+        "claim": "No restriction on nationality or ordinary residence.",
+        "url": "https://www.ox.ac.uk/clarendon",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "eligibility.ethiopian",
+        "claim": "No nationality restriction is stated; non-UK applicants of any nationality are eligible, so Ethiopian nationals qualify.",
+        "url": "https://www.ox.ac.uk/clarendon",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "tuition",
+        "claim": "Scholarships cover course fees and provide a grant for living expenses for the period of fee liability.",
+        "url": "https://www.ox.ac.uk/clarendon",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher",
+        "quote": "cover course fees and provide a grant for living expenses for the period of fee liability"
+      },
+      {
+        "field": "stipend",
+        "claim": "A grant for living expenses is provided (amount not stated).",
+        "url": "https://www.ox.ac.uk/clarendon",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "separateApplication",
+        "claim": "Automatically considered if you apply by the December or January deadline.",
+        "url": "https://www.ox.ac.uk/clarendon",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher",
+        "quote": "automatically considered"
+      }
+    ],
+    "verificationNotes": "Coverage and eligibility confirmed. Living grant amount and the exact course deadline must be checked on the chosen DPhil page.",
+    "confidence": "medium"
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [],
+    "department": "Any faculty, incl. Social Sciences (e.g. Warwick Business School, Economics)",
+    "programme": "Eligible Warwick PGR course",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [
+      "£5,000 Research Training and Support Grant"
+    ],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "Must start in 2027/28.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [
+      "Warwick PGR course application",
+      "Chancellors' scholarship application (one form covers all six streams)",
+      "References"
+    ],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "yes",
+    "selectionStages": [],
+    "competitionNote": null,
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [
+      "Department English requirement",
+      "Whether Warwick Business School / Economics expects a supervisor agreement before applying"
+    ],
+    "durationNote": "3.5 years. Scholarships cannot be deferred.",
+    "country": "United Kingdom",
+    "id": "warwick-chancellors-2027",
+    "title": "Warwick Faculty Chancellors' Scholarship — PhD (2027/28 entry)",
+    "university": "University of Warwick",
+    "subjects": [
+      "Any subject"
+    ],
+    "themes": [
+      "management",
+      "economics",
+      "supply chain management",
+      "sustainability",
+      "food security",
+      "organisational sustainability"
+    ],
+    "programmeUrl": "https://warwick.ac.uk/study/postgraduate/research/",
+    "fundingUrl": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_funding/chancellors_international/",
+    "scholarshipName": "Warwick Chancellors' Scholarship (Faculty or Interdisciplinary stream)",
+    "fundingProvider": "University of Warwick Doctoral College",
+    "fundingModel": "scholarship",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "yes",
+      "restrictedTo": null,
+      "note": "Faculty Chancellors: any nationality or fee status. Current Warwick PGR students cannot apply."
+    },
+    "tuition": {
+      "coverage": "full-international",
+      "internationalFeeCoveredInFull": "yes",
+      "note": "Full payment of academic fees (UK or international)."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": 21805,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": "UKRI rate (2026/27 figure)",
+      "note": "Warwick pays the UKRI-rate stipend; UKRI's 2026/27 minimum is £21,805. The 2027/28 rate is not yet published."
+    },
+    "durationYears": 3.5,
+    "deadline": {
+      "date": "2026-12-07T16:59:00Z",
+      "type": "admissions",
+      "timezone": "Europe/London",
+      "note": "You must apply for the PhD course by 7 Dec 2026 (16:59 GMT); the scholarship application closes 10 Dec 2026. Late submissions are not accepted.",
+      "steps": [
+        {
+          "label": "PhD course application",
+          "date": "2026-12-07T16:59:00Z",
+          "type": "admissions"
+        },
+        {
+          "label": "Scholarship application",
+          "date": "2026-12-10T16:59:00Z",
+          "type": "scholarship"
+        },
+        {
+          "label": "References due",
+          "date": "2026-12-21T16:59:00Z",
+          "type": "other"
+        },
+        {
+          "label": "Offers released",
+          "date": "2027-03-05",
+          "type": "outcome"
+        }
+      ]
+    },
+    "startDate": "2027-10-01",
+    "entryRequirements": "An application for an eligible Warwick PGR course. Interdisciplinary stream requires a project aligned to a Research Spotlight or Centre.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "University of Warwick — Chancellors' scholarships",
+        "url": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_funding/chancellors_international/"
+      },
+      {
+        "label": "UKRI — studentship stipend rates",
+        "url": "https://www.ukri.org/what-we-do/developing-people-and-skills/find-studentships-and-doctoral-training/get-a-studentship-to-fund-your-doctorate/"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "eligibility.international",
+        "claim": "Open to applicants of any nationality or fee status.",
+        "url": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_funding/chancellors_international/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher",
+        "quote": "Be of any nationality or fee status"
+      },
+      {
+        "field": "eligibility.ethiopian",
+        "claim": "No nationality restriction is stated; non-UK applicants of any nationality are eligible, so Ethiopian nationals qualify.",
+        "url": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_funding/chancellors_international/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "tuition",
+        "claim": "Full payment of academic fees (UK or international).",
+        "url": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_funding/chancellors_international/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher",
+        "quote": "Full payment of your academic fees (UK or international)"
+      },
+      {
+        "field": "stipend",
+        "claim": "Stipend at the UKRI rate.",
+        "url": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_funding/chancellors_international/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "stipend",
+        "claim": "UKRI minimum stipend £21,805 from 1 October 2026.",
+        "url": "https://www.ukri.org/what-we-do/developing-people-and-skills/find-studentships-and-doctoral-training/get-a-studentship-to-fund-your-doctorate/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "duration",
+        "claim": "Funding for 3.5 years.",
+        "url": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_funding/chancellors_international/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "deadline",
+        "claim": "Course applications 7 Dec 2026, scholarship applications 10 Dec 2026, 16:59 GMT.",
+        "url": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_funding/chancellors_international/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "separateApplication",
+        "claim": "One scholarship application covers all six streams.",
+        "url": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_funding/chancellors_international/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "All gate facts confirmed. The stipend figure combines Warwick's \"UKRI rate\" statement with UKRI's published 2026/27 rate.",
+    "confidence": "high"
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [],
+    "department": "Faculty of Humanities (co-supervised with another faculty)",
+    "programme": "Themed PhD projects listed on FindAPhD",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "2027 entry.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "unknown",
+    "selectionStages": [],
+    "competitionNote": "Seven themed scholarships (\"Sensing the world\").",
+    "firstListed": "2026-10-14",
+    "discrepancies": [
+      {
+        "id": "man-year",
+        "description": "The Humanities page header says \"2026 Entry\" and \"closed for 2026 entry\" while listing 2027 details below.",
+        "urls": [
+          "https://humanities.manchester.ac.uk/study/postgraduate-research/funding/list-of-awards/presidents-doctoral-scholar-award"
+        ],
+        "resolved": false
+      },
+      {
+        "id": "man-elig",
+        "description": "The university-wide page (2026/27) says all nationalities; the Humanities 2027 page has an empty eligibility section.",
+        "urls": [
+          "https://www.manchester.ac.uk/study/postgraduate-research/funding/presidents-doctoral-scholar-award",
+          "https://humanities.manchester.ac.uk/study/postgraduate-research/funding/list-of-awards/presidents-doctoral-scholar-award"
+        ],
+        "resolved": false
+      }
+    ],
+    "outstanding": [
+      "Does \"full tuition fee award\" cover the international fee?",
+      "Confirm 2027 eligibility criteria",
+      "Check whether any of the seven projects relates to food or sustainability"
+    ],
+    "durationNote": "3.5 or 4 years.",
+    "country": "United Kingdom",
+    "id": "manchester-pds-humanities-2027",
+    "title": "President's Doctoral Scholar Award — Faculty of Humanities, 'Sensing the world' projects (University of Manchester, 2027 entry)",
+    "university": "University of Manchester",
+    "subjects": [
+      "Humanities",
+      "Social Sciences"
+    ],
+    "themes": [
+      "social science",
+      "sustainability"
+    ],
+    "programmeUrl": "https://humanities.manchester.ac.uk/study/postgraduate-research/funding/list-of-awards/presidents-doctoral-scholar-award",
+    "fundingUrl": "https://humanities.manchester.ac.uk/study/postgraduate-research/funding/list-of-awards/presidents-doctoral-scholar-award",
+    "scholarshipName": "President's Doctoral Scholar Award",
+    "fundingProvider": "University of Manchester",
+    "fundingModel": "studentship",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "yes",
+      "restrictedTo": null,
+      "note": "University-wide PDS page: open to students of all nationalities."
+    },
+    "tuition": {
+      "coverage": "unknown",
+      "internationalFeeCoveredInFull": "unknown",
+      "note": "\"Full tuition fee award\" — the page does not say whether this is the Home or international fee."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": 22805,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": "2026/27",
+      "note": "UKRI rate £21,805 plus a £1,000 enhancement."
+    },
+    "durationYears": 3.5,
+    "deadline": {
+      "date": "2026-12-18",
+      "type": "scholarship",
+      "timezone": "Europe/London",
+      "note": "Closing date for 2027 entry.",
+      "steps": [
+        {
+          "label": "Closing date",
+          "date": "2026-12-18",
+          "type": "scholarship"
+        }
+      ]
+    },
+    "startDate": "2027-09-01",
+    "entryRequirements": "Apply to one of the seven themed projects listed on FindAPhD.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "Manchester Humanities — PDS Award",
+        "url": "https://humanities.manchester.ac.uk/study/postgraduate-research/funding/list-of-awards/presidents-doctoral-scholar-award"
+      },
+      {
+        "label": "Manchester — PDS Award (university-wide)",
+        "url": "https://www.manchester.ac.uk/study/postgraduate-research/funding/presidents-doctoral-scholar-award"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "eligibility.international",
+        "claim": "Open to students of all nationalities.",
+        "url": "https://www.manchester.ac.uk/study/postgraduate-research/funding/presidents-doctoral-scholar-award",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher",
+        "quote": "students of all nationalities"
+      },
+      {
+        "field": "eligibility.ethiopian",
+        "claim": "No nationality restriction is stated; non-UK applicants of any nationality are eligible, so Ethiopian nationals qualify.",
+        "url": "https://www.manchester.ac.uk/study/postgraduate-research/funding/presidents-doctoral-scholar-award",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "stipend",
+        "claim": "UKRI-rate stipend £21,805 plus £1,000 enhancement.",
+        "url": "https://humanities.manchester.ac.uk/study/postgraduate-research/funding/list-of-awards/presidents-doctoral-scholar-award",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "duration",
+        "claim": "Full tuition fee award for 3.5 / 4 years.",
+        "url": "https://humanities.manchester.ac.uk/study/postgraduate-research/funding/list-of-awards/presidents-doctoral-scholar-award",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "deadline",
+        "claim": "Closing date 18 December 2026.",
+        "url": "https://humanities.manchester.ac.uk/study/postgraduate-research/funding/list-of-awards/presidents-doctoral-scholar-award",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "Projects are fixed and themed — topic fit with her interests is weak. Fee level is the key unknown.",
+    "confidence": "low"
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [],
+    "department": "Any LSE department (e.g. Management, Geography and Environment, International Development)",
+    "programme": "Any LSE MPhil/PhD",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "Autumn 2027.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [
+      "LSE graduate application (applying by the deadline gives automatic consideration)",
+      "References by the deadline"
+    ],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "no",
+    "selectionStages": [],
+    "competitionNote": null,
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [
+      "Confirm the studentship pays the overseas fee in full",
+      "Stipend amount for 2027/28",
+      "Department-specific deadline (3 Dec 2026 vs 13 Jan 2027)"
+    ],
+    "durationNote": "Four years, renewed annually on satisfactory progress.",
+    "country": "United Kingdom",
+    "id": "lse-phd-studentship-2027",
+    "title": "LSE PhD Studentships — any LSE discipline (2027 entry)",
+    "university": "London School of Economics and Political Science",
+    "subjects": [
+      "Management",
+      "Economics",
+      "Development",
+      "Environment"
+    ],
+    "themes": [
+      "management",
+      "economics",
+      "food policy",
+      "sustainability",
+      "climate resilience",
+      "agricultural economics",
+      "supply chain management"
+    ],
+    "programmeUrl": "https://www.lse.ac.uk/study-at-lse/graduate/prospective-students/how-to-apply/when-to-apply",
+    "fundingUrl": "https://www.lse.ac.uk/study-at-lse/Graduate/Fees-and-Funding",
+    "scholarshipName": "LSE PhD Studentship",
+    "fundingProvider": "London School of Economics and Political Science",
+    "fundingModel": "studentship",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "yes",
+      "restrictedTo": null,
+      "note": "Available to UK, EU and international students in any discipline."
+    },
+    "tuition": {
+      "coverage": "unknown",
+      "internationalFeeCoveredInFull": "unknown",
+      "note": "\"Full fees\" — the overseas rate is not stated explicitly."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": null,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": null,
+      "note": "Annual stipend included. A 2026/27 departmental studentship page says \"in line with UKRI rates\", at least £22,780."
+    },
+    "durationYears": 4,
+    "deadline": {
+      "date": "2027-01-13",
+      "type": "scholarship",
+      "timezone": "Europe/London",
+      "note": "Main funding deadline (complete applications incl. references). Some departments use 3 Dec 2026.",
+      "steps": [
+        {
+          "label": "Early departmental funding deadline (some programmes)",
+          "date": "2026-12-03",
+          "type": "scholarship"
+        },
+        {
+          "label": "Main funding deadline",
+          "date": "2027-01-13",
+          "type": "scholarship"
+        },
+        {
+          "label": "Final deadline if funds remain",
+          "date": "2027-05-27",
+          "type": "scholarship"
+        }
+      ]
+    },
+    "startDate": "2027-09-27",
+    "entryRequirements": "Admission to an LSE MPhil/PhD.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "LSE — When to apply",
+        "url": "https://www.lse.ac.uk/study-at-lse/graduate/prospective-students/how-to-apply/when-to-apply"
+      },
+      {
+        "label": "LSE — Fees and funding",
+        "url": "https://www.lse.ac.uk/study-at-lse/Graduate/Fees-and-Funding"
+      },
+      {
+        "label": "LSE — Social Policy PhD studentship (example)",
+        "url": "https://www.lse.ac.uk/study-at-lse/Graduate/fees-and-funding/lse-social-policy-phd-studentship"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "eligibility.international",
+        "claim": "Available to UK, EU and international students.",
+        "url": "https://www.lse.ac.uk/study-at-lse/Graduate/Fees-and-Funding",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "eligibility.ethiopian",
+        "claim": "No nationality restriction is stated; non-UK applicants of any nationality are eligible, so Ethiopian nationals qualify.",
+        "url": "https://www.lse.ac.uk/study-at-lse/Graduate/Fees-and-Funding",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "stipend",
+        "claim": "Studentships include an annual stipend.",
+        "url": "https://www.lse.ac.uk/study-at-lse/Graduate/Fees-and-Funding",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "duration",
+        "claim": "Tenable for four years.",
+        "url": "https://www.lse.ac.uk/study-at-lse/Graduate/Fees-and-Funding",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "deadline",
+        "claim": "Main funding deadline 13 January 2027; some departments 3 December 2026.",
+        "url": "https://www.lse.ac.uk/study-at-lse/graduate/prospective-students/how-to-apply/when-to-apply",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "separateApplication",
+        "claim": "Complete applications by the deadline are considered for studentships.",
+        "url": "https://www.lse.ac.uk/study-at-lse/graduate/prospective-students/how-to-apply/when-to-apply",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "International fee rate and stipend amount need confirming in the award terms.",
+    "confidence": "medium"
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [],
+    "department": "Depends on pathway and institution",
+    "programme": "PhD within an MGS pathway",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "October 2027.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [
+      "Online funding application form",
+      "Supporting Statement from prospective lead supervisor",
+      "Project details supporting statement",
+      "Transcripts",
+      "Two references"
+    ],
+    "proposalRequired": "yes",
+    "supervisorContactRequired": "yes",
+    "separateScholarshipApplication": "yes",
+    "selectionStages": [
+      "University PhD application",
+      "MGS funding application",
+      "Pathway assessment"
+    ],
+    "competitionNote": null,
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [
+      "MGS Eligibility Guidance for international applicants",
+      "Which MGS institutions waive the international fee difference",
+      "Stipend amount",
+      "Funded duration"
+    ],
+    "durationNote": "",
+    "country": "United Kingdom",
+    "id": "mgs-esrc-dtp-2027",
+    "title": "Midlands Graduate School ESRC DTP studentships (October 2027 entry)",
+    "university": "Midlands Graduate School (Aston, Birmingham, De Montfort, Leicester, Loughborough, Nottingham, Nottingham Trent, Warwick)",
+    "subjects": [
+      "Social Science",
+      "Management",
+      "Economics"
+    ],
+    "themes": [
+      "management",
+      "economics",
+      "social science",
+      "sustainability",
+      "supply chain management",
+      "food security"
+    ],
+    "programmeUrl": "https://warwick.ac.uk/fac/cross_fac/mgsdtp/studentships/howtoapply",
+    "fundingUrl": "https://warwick.ac.uk/fac/cross_fac/mgsdtp/studentships/howtoapply/faqs",
+    "scholarshipName": "MGS ESRC DTP Studentship",
+    "fundingProvider": "ESRC (UKRI) via Midlands Graduate School",
+    "fundingModel": "dtp",
+    "eligibility": {
+      "international": "unknown",
+      "ethiopian": "unknown",
+      "restrictedTo": null,
+      "note": "Pages reviewed point to separate Eligibility Guidance."
+    },
+    "tuition": {
+      "coverage": "home-plus-waiver",
+      "internationalFeeCoveredInFull": "unknown",
+      "note": "ESRC awards cover tuition at the Home rate; any waiver of the international difference depends on each institution."
+    },
+    "stipend": {
+      "provided": "unknown",
+      "amount": null,
+      "currency": "GBP",
+      "frequency": null,
+      "rateYear": null,
+      "note": "Not stated on the pages reviewed."
+    },
+    "durationYears": null,
+    "deadline": {
+      "date": "2027-01-12T12:00:00Z",
+      "type": "scholarship",
+      "timezone": "Europe/London",
+      "note": "MGS funding application closes 12:00 GMT. Submit the university PhD application first (suggested by 1 Dec 2026).",
+      "steps": [
+        {
+          "label": "Suggested university PhD application",
+          "date": "2026-12-01",
+          "type": "admissions"
+        },
+        {
+          "label": "MGS funding application, 12:00 GMT",
+          "date": "2027-01-12T12:00:00Z",
+          "type": "scholarship"
+        },
+        {
+          "label": "Expected outcome (mid-April)",
+          "date": "2027-04-15",
+          "type": "outcome"
+        }
+      ]
+    },
+    "startDate": "2027-10-01",
+    "entryRequirements": "Apply for PhD admission at one MGS institution before applying for funding. One funding application per applicant.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "MGS — How to apply",
+        "url": "https://warwick.ac.uk/fac/cross_fac/mgsdtp/studentships/howtoapply"
+      },
+      {
+        "label": "MGS — FAQs",
+        "url": "https://warwick.ac.uk/fac/cross_fac/mgsdtp/studentships/howtoapply/faqs"
+      },
+      {
+        "label": "UKRI — get a studentship",
+        "url": "https://www.ukri.org/what-we-do/developing-people-and-skills/find-studentships-and-doctoral-training/get-a-studentship-to-fund-your-doctorate/"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "tuition",
+        "claim": "ESRC awards cover tuition fees at the Home rate.",
+        "url": "https://warwick.ac.uk/fac/cross_fac/mgsdtp/studentships/howtoapply/faqs",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher",
+        "quote": "ESRC awards cover tuition fees at the Home rate"
+      },
+      {
+        "field": "deadline",
+        "claim": "MGS funding application closes midday GMT, 12 January 2027.",
+        "url": "https://warwick.ac.uk/fac/cross_fac/mgsdtp/studentships/howtoapply",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "supervisorContact",
+        "claim": "A Supporting Statement from the prospective lead supervisor is required.",
+        "url": "https://warwick.ac.uk/fac/cross_fac/mgsdtp/studentships/howtoapply",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "separateApplication",
+        "claim": "A separate ESRC studentship funding application is required.",
+        "url": "https://warwick.ac.uk/fac/cross_fac/mgsdtp/studentships/howtoapply",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "Eligibility, stipend and international fee arrangements are all on pages not yet reviewed.",
+    "confidence": "low"
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [],
+    "department": "School of Social and Political Science (incl. Anthropology & Development Studies)",
+    "programme": "PhD (1+3.5 or +3.5)",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "2027/28.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [
+      "Edinburgh PhD application with research proposal",
+      "Transcripts",
+      "References",
+      "SGSSS funding application with CV and referee details"
+    ],
+    "proposalRequired": "yes",
+    "supervisorContactRequired": "yes",
+    "separateScholarshipApplication": "yes",
+    "selectionStages": [],
+    "competitionNote": null,
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [
+      "SGSSS international eligibility for 2027/28",
+      "Does Edinburgh cover the international fee difference?",
+      "Stipend amount",
+      "Which challenge pathway fits food systems"
+    ],
+    "durationNote": "",
+    "country": "United Kingdom",
+    "id": "sgsss-edinburgh-2027",
+    "title": "SGSSS ESRC studentships via the University of Edinburgh — School of Social and Political Science (2027/28)",
+    "university": "University of Edinburgh",
+    "subjects": [
+      "Development Studies",
+      "Social Science"
+    ],
+    "themes": [
+      "social science",
+      "food security",
+      "food policy",
+      "sustainability",
+      "climate resilience"
+    ],
+    "programmeUrl": "https://www.sps.ed.ac.uk/study/prospective/postgraduate-research-programmes/scholarships/uk-research-council-awards/esrc-awards",
+    "fundingUrl": "https://www.sgsss.ac.uk/studentships/open-competition/",
+    "scholarshipName": "Scottish Graduate School of Social Science (ESRC) Studentship",
+    "fundingProvider": "ESRC (UKRI) via SGSSS",
+    "fundingModel": "dtp",
+    "eligibility": {
+      "international": "unknown",
+      "ethiopian": "unknown",
+      "restrictedTo": null,
+      "note": "Eligibility is in the SGSSS Open Competition Guidance (not yet reviewed)."
+    },
+    "tuition": {
+      "coverage": "unknown",
+      "internationalFeeCoveredInFull": "unknown",
+      "note": "Not stated. In the 2026 round, Stirling (also SGSSS) covered Home fees only for international awardees — Edinburgh's policy must be checked."
+    },
+    "stipend": {
+      "provided": "unknown",
+      "amount": null,
+      "currency": "GBP",
+      "frequency": null,
+      "rateYear": null,
+      "note": "Not stated on the pages reviewed."
+    },
+    "durationYears": null,
+    "deadline": {
+      "date": "2026-11-19T17:00:00Z",
+      "type": "admissions",
+      "timezone": "Europe/London",
+      "note": "Stage 1 (Edinburgh PhD application) by 17:00 GMT 19 Nov 2026; Stage 2 (SGSSS funding application) by 17:00 GMT 24 Nov 2026.",
+      "steps": [
+        {
+          "label": "Stage 1 — Edinburgh PhD application",
+          "date": "2026-11-19T17:00:00Z",
+          "type": "admissions"
+        },
+        {
+          "label": "Stage 2 — SGSSS funding application",
+          "date": "2026-11-24T17:00:00Z",
+          "type": "scholarship"
+        },
+        {
+          "label": "Decisions by early May",
+          "date": "2027-05-01",
+          "type": "outcome"
+        }
+      ]
+    },
+    "startDate": "2027-09-01",
+    "entryRequirements": "Admission to an Edinburgh PhD with a proposal, transcripts and references.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "Edinburgh SPS — ESRC awards",
+        "url": "https://www.sps.ed.ac.uk/study/prospective/postgraduate-research-programmes/scholarships/uk-research-council-awards/esrc-awards"
+      },
+      {
+        "label": "SGSSS — Open competition",
+        "url": "https://www.sgsss.ac.uk/studentships/open-competition/"
+      },
+      {
+        "label": "Stirling — SGSSS 2026 (fee policy example)",
+        "url": "https://www.stir.ac.uk/scholarships/general/esrc-funded-studentship-opportunities-scottish-graduate-school-of-social-science"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "deadline",
+        "claim": "Stage 1 by 5pm 19 Nov 2026 GMT; Stage 2 by 5pm 24 Nov 2026 GMT.",
+        "url": "https://www.sps.ed.ac.uk/study/prospective/postgraduate-research-programmes/scholarships/uk-research-council-awards/esrc-awards",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "supervisorContact",
+        "claim": "Contact your proposed supervisor(s) and the PGR lead before applying; supervisor completes parts of the application.",
+        "url": "https://www.sgsss.ac.uk/studentships/open-competition/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "separateApplication",
+        "claim": "A separate SGSSS funding application is required.",
+        "url": "https://www.sps.ed.ac.uk/study/prospective/postgraduate-research-programmes/scholarships/uk-research-council-awards/esrc-awards",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "documents",
+        "claim": "PhD proposal, transcripts and references for admission; CV and referee details for SGSSS.",
+        "url": "https://www.sps.ed.ac.uk/study/prospective/postgraduate-research-programmes/scholarships/uk-research-council-awards/esrc-awards",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "Deadlines are confirmed and close soon, but none of the funding facts are. Treat as a lead only.",
+    "confidence": "low"
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [],
+    "department": null,
+    "programme": "Any eligible UK PhD",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [
+      "Return airfare",
+      "Study travel grant",
+      "Fieldwork airfare contribution",
+      "Mid-term visit home",
+      "Partial family allowances"
+    ],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "yes",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": ""
+    },
+    "startNote": "September/October 2027.",
+    "minimumDegree": "2:1",
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "yes",
+    "selectionStages": [
+      "National nominating agency",
+      "CSC selection"
+    ],
+    "competitionNote": null,
+    "firstListed": "2026-10-14",
+    "discrepancies": [
+      {
+        "id": "csc-tz",
+        "description": "Sussex states the deadline as 16:00 GMT; the CSC states 16:00 BST.",
+        "urls": [
+          "https://www.sussex.ac.uk/study/fees-funding/phd-funding/view/1957-Commonwealth-PhD-Scholarships",
+          "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/"
+        ],
+        "resolved": true,
+        "resolution": "The CSC (scheme owner) governs: 16:00 BST on 20 Oct 2026, i.e. 15:00 GMT."
+      }
+    ],
+    "outstanding": [],
+    "durationNote": "36 months full-time.",
+    "country": "United Kingdom",
+    "id": "commonwealth-phd-2027",
+    "title": "Commonwealth PhD Scholarships 2027/28",
+    "university": "Various UK universities",
+    "subjects": [
+      "Any subject"
+    ],
+    "themes": [
+      "food security",
+      "agricultural economics",
+      "climate resilience",
+      "sustainability"
+    ],
+    "programmeUrl": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/",
+    "fundingUrl": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/",
+    "scholarshipName": "Commonwealth PhD Scholarship",
+    "fundingProvider": "Commonwealth Scholarship Commission in the UK",
+    "fundingModel": "scholarship",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "no",
+      "restrictedTo": null,
+      "note": "Only citizens or refugees of the listed countries may apply. Ethiopia is not on the list."
+    },
+    "tuition": {
+      "coverage": "full-international",
+      "internationalFeeCoveredInFull": "yes",
+      "note": "Full tuition fees, by agreement between the CSC and the university."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": 1712,
+      "currency": "GBP",
+      "frequency": "per month",
+      "rateYear": "current",
+      "note": "£2,000 per month in the London area."
+    },
+    "durationYears": 3,
+    "deadline": {
+      "date": "2026-10-20T15:00:00Z",
+      "type": "scholarship",
+      "timezone": "Europe/London",
+      "note": "16:00 BST, Tuesday 20 October 2026, via CSC Central. Nominating agencies set their own deadlines.",
+      "steps": []
+    },
+    "startDate": "2027-10-01",
+    "entryRequirements": "First degree at least 2:1, or a second-class degree plus a relevant postgraduate qualification.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "CSC — Commonwealth PhD Scholarships",
+        "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/"
+      },
+      {
+        "label": "University of Sussex — Commonwealth PhD Scholarships",
+        "url": "https://www.sussex.ac.uk/study/fees-funding/phd-funding/view/1957-Commonwealth-PhD-Scholarships"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "eligibility.international",
+        "claim": "Open to citizens of listed eligible countries.",
+        "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "eligibility.ethiopian",
+        "claim": "Eligible countries: Bangladesh, The Gambia, Kiribati, Lesotho, Malawi, Mozambique, Nigeria, Pakistan, Rwanda, Sierra Leone, Solomon Islands, Sri Lanka, Tanzania, Togo, Tuvalu, Uganda, Zambia. Ethiopia is not listed.",
+        "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "tuition",
+        "claim": "Full tuition fees.",
+        "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "stipend",
+        "claim": "£1,712 per month (£2,000 London).",
+        "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "duration",
+        "claim": "36 months.",
+        "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "deadline",
+        "claim": "16:00 BST, Tuesday 20 October.",
+        "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "Checked on the official CSC page: a well-known fully funded award that Ethiopian nationals cannot apply for.",
+    "confidence": "high"
+  }
+]

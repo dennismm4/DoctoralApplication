@@ -1,0 +1,497 @@
+[
+  {
+    "recordType": "researched",
+    "selectionCriteria": [],
+    "department": "Natural Resources Institute (lead)",
+    "programme": "UKFS-CDT PhD",
+    "researchGroup": "UK Food Systems CDT",
+    "supervisors": [],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "Historic.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": "IELTS 7.0",
+      "tests": [
+        "IELTS"
+      ]
+    },
+    "requiredDocuments": [
+      "UKFS-CDT application form",
+      "Referee form",
+      "Transcripts",
+      "CV"
+    ],
+    "proposalRequired": "no",
+    "supervisorContactRequired": "no",
+    "separateScholarshipApplication": "unknown",
+    "selectionStages": [
+      "Interview with three UKFS-CDT academics"
+    ],
+    "competitionNote": null,
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [
+      "Is there a 2027 intake?"
+    ],
+    "durationNote": "",
+    "country": "United Kingdom",
+    "id": "ukfs-cdt-food-systems",
+    "title": "UK Food Systems Centre for Doctoral Training (UKFS-CDT) studentships",
+    "university": "University of Greenwich (lead) with Brunel, UCL, RVC, Aberystwyth, City, Sussex",
+    "subjects": [
+      "Food Systems"
+    ],
+    "themes": [
+      "food security",
+      "food sustainability",
+      "food policy",
+      "food waste reduction",
+      "supply chain management",
+      "agri-food systems"
+    ],
+    "programmeUrl": "https://brunel.ac.uk/research/Research-degrees/DTPs/UK-Food-Systems-Doctoral-Training-Centre",
+    "fundingUrl": "https://brunel.ac.uk/research/Research-degrees/DTPs/UK-Food-Systems-Doctoral-Training-Centre",
+    "scholarshipName": "UKFS-CDT Studentship",
+    "fundingProvider": "UKRI via UK Food Systems CDT",
+    "fundingModel": "cdt",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "unknown",
+      "restrictedTo": null,
+      "note": "Historic round: UKRI studentships open to Home, EU and International students."
+    },
+    "tuition": {
+      "coverage": "home-plus-waiver",
+      "internationalFeeCoveredInFull": "yes",
+      "note": "Brunel waived the Home–International fee difference (historic round)."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": 19668,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": "2022/23",
+      "note": "Including London Weighting (historic)."
+    },
+    "durationYears": null,
+    "deadline": {
+      "date": "2022-02-15",
+      "type": "admissions",
+      "timezone": "Europe/London",
+      "note": "Historic round — shortlisting began 15 Feb 2022.",
+      "steps": []
+    },
+    "startDate": "2022-09-01",
+    "entryRequirements": "Normally a Master's degree. IELTS 7.0 for international applicants.",
+    "lastVerified": "2026-10-14T17:20:00+03:00",
+    "sources": [
+      {
+        "label": "Brunel — UK Food Systems CDT",
+        "url": "https://brunel.ac.uk/research/Research-degrees/DTPs/UK-Food-Systems-Doctoral-Training-Centre"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "eligibility.international",
+        "claim": "Open to Home, EU and International students.",
+        "url": "https://brunel.ac.uk/research/Research-degrees/DTPs/UK-Food-Systems-Doctoral-Training-Centre",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "tuition",
+        "claim": "Brunel waived the Home–International difference.",
+        "url": "https://brunel.ac.uk/research/Research-degrees/DTPs/UK-Food-Systems-Doctoral-Training-Centre",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "stipend",
+        "claim": "£19,668 incl. London Weighting (2022/23).",
+        "url": "https://brunel.ac.uk/research/Research-degrees/DTPs/UK-Food-Systems-Doctoral-Training-Centre",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "deadline",
+        "claim": "Shortlisting from 15 Feb 2022.",
+        "url": "https://brunel.ac.uk/research/Research-degrees/DTPs/UK-Food-Systems-Doctoral-Training-Centre",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T17:20:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "Closely aligned food-systems programme. Archived; watch for a future round.",
+    "confidence": "low",
+    "archivedAt": "2026-10-14T20:30:00+03:00",
+    "archiveReason": "Deadline passed (historic round)."
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [],
+    "department": null,
+    "programme": "NERC GW4+ DTP PhD",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "Passed.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "unknown",
+    "selectionStages": [],
+    "competitionNote": "In competition for funding — not guaranteed.",
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [],
+    "durationNote": "",
+    "country": "United Kingdom",
+    "id": "exeter-gw4-food-security-2026",
+    "title": "Analysing the impact of extreme weather on food security — NERC GW4+ DTP (University of Exeter, Sept 2026 entry)",
+    "university": "University of Exeter",
+    "subjects": [
+      "Food Security",
+      "Climate"
+    ],
+    "themes": [
+      "food security",
+      "climate resilience"
+    ],
+    "programmeUrl": "https://www.exeter.ac.uk/study/funding/award/?id=5748",
+    "fundingUrl": "https://www.exeter.ac.uk/study/funding/award/?id=5748",
+    "scholarshipName": "NERC GW4+ DTP Studentship (in competition)",
+    "fundingProvider": "NERC (UKRI) via GW4+ DTP",
+    "fundingModel": "dtp",
+    "eligibility": {
+      "international": "unknown",
+      "ethiopian": "unknown",
+      "restrictedTo": null,
+      "note": "Not stated."
+    },
+    "tuition": {
+      "coverage": "unknown",
+      "internationalFeeCoveredInFull": "unknown",
+      "note": "Not stated."
+    },
+    "stipend": {
+      "provided": "unknown",
+      "amount": null,
+      "currency": "GBP",
+      "frequency": null,
+      "rateYear": null,
+      "note": "Not stated."
+    },
+    "durationYears": null,
+    "deadline": {
+      "date": null,
+      "type": null,
+      "timezone": "Europe/London",
+      "note": "Not stated; entry was September 2026.",
+      "steps": []
+    },
+    "startDate": "2026-09-01",
+    "entryRequirements": "Not stated.",
+    "lastVerified": "2026-10-14T17:20:00+03:00",
+    "sources": [
+      {
+        "label": "University of Exeter — award page",
+        "url": "https://www.exeter.ac.uk/study/funding/award/?id=5748"
+      }
+    ],
+    "evidence": [],
+    "verificationNotes": "Thematic reference. GW4+ may advertise similar projects for 2027 entry.",
+    "confidence": "low",
+    "archivedAt": "2026-10-14T20:30:00+03:00",
+    "archiveReason": "Programme start date passed."
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [
+      {
+        "text": "Outstanding academic merit and research potential",
+        "url": "https://registryservices.ed.ac.uk/scholarships-and-student-funding/prospective-postgraduates/funding-for-international-students-40"
+      }
+    ],
+    "department": "School of Economics",
+    "programme": "4-year Economics (PhD with Integrated Study)",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "2026/27.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "yes",
+    "selectionStages": [],
+    "competitionNote": null,
+    "firstListed": "2026-10-14",
+    "discrepancies": [
+      {
+        "id": "ed-ukri",
+        "description": "Edinburgh states the 2026/27 UKRI level as £21,780; UKRI states £21,805.",
+        "urls": [
+          "https://registryservices.ed.ac.uk/scholarships-and-student-funding/prospective-postgraduates/funding-for-international-students-40",
+          "https://www.ukri.org/what-we-do/developing-people-and-skills/find-studentships-and-doctoral-training/get-a-studentship-to-fund-your-doctorate/"
+        ],
+        "resolved": false
+      }
+    ],
+    "outstanding": [
+      "Is there a 2027/28 round?",
+      "Are international fees covered?"
+    ],
+    "durationNote": "",
+    "country": "United Kingdom",
+    "id": "edinburgh-economics-cra-2026",
+    "title": "College Research Student Award — Economics PhD with Integrated Study (University of Edinburgh, 2026/27)",
+    "university": "University of Edinburgh",
+    "subjects": [
+      "Economics"
+    ],
+    "themes": [
+      "economics",
+      "agricultural economics"
+    ],
+    "programmeUrl": "https://registryservices.ed.ac.uk/scholarships-and-student-funding/prospective-postgraduates/funding-for-international-students-40",
+    "fundingUrl": "https://registryservices.ed.ac.uk/scholarships-and-student-funding/prospective-postgraduates/funding-for-international-students-40",
+    "scholarshipName": "College Research Student Award",
+    "fundingProvider": "University of Edinburgh",
+    "fundingModel": "scholarship",
+    "eligibility": {
+      "international": "unknown",
+      "ethiopian": "unknown",
+      "restrictedTo": null,
+      "note": "Listed under funding for international students, but eligible nationalities are not stated."
+    },
+    "tuition": {
+      "coverage": "unknown",
+      "internationalFeeCoveredInFull": "unknown",
+      "note": "\"Full tuition fees\" — fee level not stated."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": 21780,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": "2026/27",
+      "note": "Stated as the UKRI level."
+    },
+    "durationYears": 4,
+    "deadline": {
+      "date": "2026-06-23",
+      "type": "scholarship",
+      "timezone": "Europe/London",
+      "note": "Closed. Admission application needed at least five working days earlier.",
+      "steps": []
+    },
+    "startDate": "2026-09-01",
+    "entryRequirements": "Outstanding academic merit and research potential.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "Edinburgh — funding for international students",
+        "url": "https://registryservices.ed.ac.uk/scholarships-and-student-funding/prospective-postgraduates/funding-for-international-students-40"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "stipend",
+        "claim": "Stipend at UKRI level, £21,780 for 2026/2027.",
+        "url": "https://registryservices.ed.ac.uk/scholarships-and-student-funding/prospective-postgraduates/funding-for-international-students-40",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "duration",
+        "claim": "Annual stipend for 4 years.",
+        "url": "https://registryservices.ed.ac.uk/scholarships-and-student-funding/prospective-postgraduates/funding-for-international-students-40",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "deadline",
+        "claim": "Deadline 23 June 2026.",
+        "url": "https://registryservices.ed.ac.uk/scholarships-and-student-funding/prospective-postgraduates/funding-for-international-students-40",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "Watch for the 2027/28 round (likely a June 2027 deadline). Economics fits her BSc.",
+    "confidence": "medium",
+    "archivedAt": "2026-10-14T20:30:00+03:00",
+    "archiveReason": "Deadline passed (23 June 2026)."
+  },
+  {
+    "recordType": "researched",
+    "selectionCriteria": [],
+    "department": "Incl. Business and Management",
+    "programme": "PhD within an SGSSS pathway",
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "October 2026.",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "yes",
+    "separateScholarshipApplication": "yes",
+    "selectionStages": [],
+    "competitionNote": null,
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [],
+    "durationNote": "",
+    "country": "United Kingdom",
+    "id": "stirling-sgsss-2026",
+    "title": "SGSSS ESRC studentships via the University of Stirling (October 2026 entry)",
+    "university": "University of Stirling",
+    "subjects": [
+      "Business and Management",
+      "Social Science"
+    ],
+    "themes": [
+      "management",
+      "social science",
+      "sustainability"
+    ],
+    "programmeUrl": "https://www.stir.ac.uk/scholarships/general/esrc-funded-studentship-opportunities-scottish-graduate-school-of-social-science",
+    "fundingUrl": "https://www.stir.ac.uk/scholarships/general/esrc-funded-studentship-opportunities-scottish-graduate-school-of-social-science",
+    "scholarshipName": "SGSSS (ESRC) Studentship",
+    "fundingProvider": "ESRC (UKRI) via SGSSS",
+    "fundingModel": "dtp",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "yes",
+      "restrictedTo": null,
+      "note": "International students can apply."
+    },
+    "tuition": {
+      "coverage": "home-only",
+      "internationalFeeCoveredInFull": "no",
+      "note": "Covers Home fees only; international awardees must pay the difference (2025 figures: £5,006 Home vs £19,500 international)."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": null,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": null,
+      "note": "\"Home fees and stipend of £20,870\" (combined figure)."
+    },
+    "durationYears": null,
+    "deadline": {
+      "date": null,
+      "type": null,
+      "timezone": "Europe/London",
+      "note": "October 2026 competition — closed.",
+      "steps": []
+    },
+    "startDate": "2026-10-01",
+    "entryRequirements": "A Stirling offer; confirmation of supervisory support at application.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [
+      {
+        "label": "Stirling — SGSSS ESRC studentships",
+        "url": "https://www.stir.ac.uk/scholarships/general/esrc-funded-studentship-opportunities-scottish-graduate-school-of-social-science"
+      }
+    ],
+    "evidence": [
+      {
+        "field": "eligibility.international",
+        "claim": "International students can apply.",
+        "url": "https://www.stir.ac.uk/scholarships/general/esrc-funded-studentship-opportunities-scottish-graduate-school-of-social-science",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "eligibility.ethiopian",
+        "claim": "No nationality restriction is stated; non-UK applicants of any nationality are eligible, so Ethiopian nationals qualify.",
+        "url": "https://www.stir.ac.uk/scholarships/general/esrc-funded-studentship-opportunities-scottish-graduate-school-of-social-science",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "tuition",
+        "claim": "Studentship covers only home fees; international awardees pay the difference.",
+        "url": "https://www.stir.ac.uk/scholarships/general/esrc-funded-studentship-opportunities-scottish-graduate-school-of-social-science",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "supervisorContact",
+        "claim": "Contact the discipline lead and proposed supervisor first; supervisory support must be confirmed.",
+        "url": "https://www.stir.ac.uk/scholarships/general/esrc-funded-studentship-opportunities-scottish-graduate-school-of-social-science",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      },
+      {
+        "field": "stipend",
+        "claim": "Value listed as \"Home fees and stipend of £20,870\" (stipend not separated).",
+        "url": "https://www.stir.ac.uk/scholarships/general/esrc-funded-studentship-opportunities-scottish-graduate-school-of-social-science",
+        "sourceType": "official",
+        "retrieved": "2026-10-14T20:30:00+03:00",
+        "addedBy": "researcher"
+      }
+    ],
+    "verificationNotes": "A real example of a \"funded\" PhD that leaves an international tuition shortfall.",
+    "confidence": "high",
+    "archivedAt": "2026-10-14T20:30:00+03:00",
+    "archiveReason": "Funding shortfall; round closed."
+  }
+]

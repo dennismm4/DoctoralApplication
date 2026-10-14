@@ -1,0 +1,197 @@
+[
+  {
+    "recordType": "demo",
+    "selectionCriteria": [
+      {
+        "text": "[DEMO] Strong academic record in a relevant discipline",
+        "url": "https://example.invalid/demo"
+      },
+      {
+        "text": "[DEMO] Understanding of supply chain management",
+        "url": "https://example.invalid/demo"
+      },
+      {
+        "text": "[DEMO] Ability to plan and conduct independent research",
+        "url": "https://example.invalid/demo"
+      }
+    ],
+    "department": "Demo School of Management",
+    "programme": "PhD Management",
+    "researchGroup": "Demo Sustainable Operations Group",
+    "supervisors": [
+      {
+        "name": "Dr Example Supervisor (fictional)",
+        "url": null,
+        "themes": [
+          "supply chain management",
+          "circular economy"
+        ]
+      }
+    ],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "",
+    "minimumDegree": "2:1",
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [
+      "CV",
+      "Cover letter",
+      "Research proposal",
+      "Two references",
+      "Transcripts"
+    ],
+    "proposalRequired": "yes",
+    "supervisorContactRequired": "yes",
+    "separateScholarshipApplication": "unknown",
+    "selectionStages": [],
+    "competitionNote": null,
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [],
+    "durationNote": "",
+    "country": "United Kingdom",
+    "id": "demo-circular-food-supply-chains",
+    "title": "[DEMO] Circular food supply chains in East African agri-food systems",
+    "university": "Demo University (fictional)",
+    "subjects": [
+      "Supply Chain Management"
+    ],
+    "themes": [
+      "supply chain management",
+      "circular economy",
+      "food waste reduction",
+      "agri-food systems"
+    ],
+    "programmeUrl": null,
+    "fundingUrl": null,
+    "scholarshipName": "Demo Studentship",
+    "fundingProvider": "Fictional",
+    "fundingModel": "studentship",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "yes",
+      "restrictedTo": null,
+      "note": "Fictional."
+    },
+    "tuition": {
+      "coverage": "full-international",
+      "internationalFeeCoveredInFull": "yes",
+      "note": "Fictional."
+    },
+    "stipend": {
+      "provided": "yes",
+      "amount": 20000,
+      "currency": "GBP",
+      "frequency": "per year",
+      "rateYear": "demo",
+      "note": "Fictional."
+    },
+    "durationYears": 3.5,
+    "deadline": {
+      "date": "2027-02-28",
+      "type": "scholarship",
+      "timezone": "Europe/London",
+      "note": "Fictional.",
+      "steps": []
+    },
+    "startDate": "2027-10-01",
+    "entryRequirements": "Fictional.",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [],
+    "evidence": [],
+    "verificationNotes": "ILLUSTRATIVE FIXTURE — not a real opportunity. It can never reach verified status.",
+    "confidence": "low"
+  },
+  {
+    "recordType": "demo",
+    "selectionCriteria": [],
+    "department": null,
+    "programme": null,
+    "researchGroup": null,
+    "supervisors": [],
+    "allowances": [],
+    "extraCosts": {
+      "visa": "unknown",
+      "immigrationHealthSurcharge": "unknown",
+      "travel": "unknown",
+      "relocation": "unknown",
+      "dependants": "unknown",
+      "note": "Not stated — assume not covered."
+    },
+    "startNote": "",
+    "minimumDegree": null,
+    "english": {
+      "requirement": null,
+      "tests": []
+    },
+    "requiredDocuments": [],
+    "proposalRequired": "unknown",
+    "supervisorContactRequired": "unknown",
+    "separateScholarshipApplication": "unknown",
+    "selectionStages": [],
+    "competitionNote": null,
+    "firstListed": "2026-10-14",
+    "discrepancies": [],
+    "outstanding": [],
+    "durationNote": "",
+    "country": "United Kingdom",
+    "id": "demo-selffunded",
+    "title": "[DEMO] Self-funded PhD in Food Policy (exclusion example)",
+    "university": "Demo University (fictional)",
+    "subjects": [
+      "Food Policy"
+    ],
+    "themes": [
+      "food policy"
+    ],
+    "programmeUrl": null,
+    "fundingUrl": null,
+    "scholarshipName": "None",
+    "fundingProvider": "None",
+    "fundingModel": "self-funded",
+    "eligibility": {
+      "international": "yes",
+      "ethiopian": "yes",
+      "restrictedTo": null,
+      "note": ""
+    },
+    "tuition": {
+      "coverage": "none",
+      "internationalFeeCoveredInFull": "no",
+      "note": ""
+    },
+    "stipend": {
+      "provided": "no",
+      "amount": null,
+      "currency": "GBP",
+      "frequency": null,
+      "rateYear": null,
+      "note": ""
+    },
+    "durationYears": null,
+    "deadline": {
+      "date": "2027-06-30",
+      "type": "admissions",
+      "timezone": "Europe/London",
+      "note": "",
+      "steps": []
+    },
+    "startDate": "2027-10-01",
+    "entryRequirements": "",
+    "lastVerified": "2026-10-14T20:30:00+03:00",
+    "sources": [],
+    "evidence": [],
+    "verificationNotes": "ILLUSTRATIVE FIXTURE — shows how a self-funded PhD is excluded.",
+    "confidence": "low"
+  }
+]

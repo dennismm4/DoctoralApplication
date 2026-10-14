@@ -1,0 +1,41 @@
+{
+  "name": "doctoral-compass",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "validate-data": "vitest run src/lib/dataset.test.ts",
+    "lint": "oxlint",
+    "discover": "tsx scripts/discover.ts",
+    "discover:fixtures": "tsx scripts/discover.ts --offline scripts/discovery/fixtures --sources scripts/discovery/fixtures/sources.fixture.json --out discovery-output/fixtures",
+    "archive": "tsx scripts/archive.ts",
+    "typecheck": "tsc -b && tsc -p tsconfig.node-tools.json"
+  },
+  "dependencies": {
+    "docx": "^9.11.0",
+    "jspdf": "^4.2.1",
+    "mammoth": "^1.13.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^29.1.1",
+    "oxlint": "^1.81.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.4"
+  }
+}

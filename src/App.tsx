@@ -15,6 +15,7 @@ import Archive from './pages/Archive'
 import Review from './pages/Review'
 import { AlertNotifier } from './components/DeadlineAlerts'
 import DataPage from './pages/DataPage'
+import { checkBackend } from './lib/ai'
 
 const NAV = [
   { to: '/', label: 'Dashboard', n: '01' },
@@ -41,11 +42,17 @@ function Mark() {
 function Shell() {
   const [open, setOpen] = useState(false)
   const loc = useLocation()
-  const { settings, storageOk } = useStore()
+  const { settings, storageOk, storageWarning } = useStore()
+  const [geminiAvailable, setGeminiAvailable] = useState(false)
   useEffect(() => {
     setOpen(false)
     window.scrollTo(0, 0)
   }, [loc.pathname])
+  useEffect(() => {
+    let current = true
+    checkBackend(settings.apiBase).then((s) => { if (current) setGeminiAvailable(s.reachable && s.aiAvailable) })
+    return () => { current = false }
+  }, [settings.apiBase])
 
   const nav = (
     <nav className="flex flex-col gap-0.5" aria-label="Main">
@@ -80,8 +87,8 @@ function Shell() {
         </div>
         {nav}
         <div className="mt-auto space-y-2 px-2 text-[11px] leading-relaxed text-white/50">
-          <p>{settings.apiBase ? 'Backend connected for drafting.' : 'Demo mode: drafts use local templates, not AI.'}</p>
-          <p>Your data stays in this browser.</p>
+          <p>{geminiAvailable ? 'Gemini backend configured; each draft shows the method used.' : 'Demo mode: drafts use local templates, not AI.'}</p>
+          <p>Your data stays local until you explicitly transfer it to your remote account.</p>
         </div>
       </aside>
 
@@ -107,6 +114,7 @@ function Shell() {
               Browser storage is unavailable (private mode or blocked). Changes will be lost when you close this tab — export a backup from Data & Privacy.
             </div>
           )}
+          {storageWarning && <div className="mb-4 rounded-md border border-ochre/40 bg-ochre-50 px-4 py-2 text-sm text-ink" role="status">{storageWarning}</div>}
           <AlertNotifier />
           <Routes>
             <Route path="/" element={<Dashboard />} />

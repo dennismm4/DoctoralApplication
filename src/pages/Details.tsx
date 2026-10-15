@@ -255,6 +255,7 @@ export default function Details() {
               <dl>
                 <Row k="Department">{op.department ?? <TriText value="unknown" />}</Row>
                 <Row k="Programme">{op.programme ?? <TriText value="unknown" />}</Row>
+                {op.description && <Row k="Project description">{op.description}</Row>}
                 <Row k="Subjects">{op.subjects.join(', ')}</Row>
                 {op.researchGroup && <Row k="Research group">{op.researchGroup}</Row>}
                 <Row k="Supervisors">{op.supervisors.length ? op.supervisors.map((s) => <div key={s.name}>{s.url ? <LinkOut href={s.url}>{s.name}</LinkOut> : s.name}</div>) : <span className="text-muted">Not specified — identify via the department</span>}</Row>

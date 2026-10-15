@@ -74,14 +74,35 @@ export function legacyFacts(p: Profile): string[] {
   return verifiedFacts(p)
 }
 
-export async function checkBackend(base: string): Promise<boolean> {
-  if (!base) return false
+export interface BackendStatus { reachable: boolean; aiAvailable: boolean; provider: string | null; model: string | null }
+
+export async function checkBackend(base: string): Promise<BackendStatus> {
+  if (!base) return { reachable: false, aiAvailable: false, provider: null, model: null }
   try {
     const res = await fetch(`${base.replace(/\/$/, '')}/health`, { method: 'GET' })
-    return res.ok
+    if (!res.ok) return { reachable: false, aiAvailable: false, provider: null, model: null }
+    const data = await res.json() as { aiAvailable?: boolean; provider?: string; model?: string }
+    return { reachable: true, aiAvailable: data.aiAvailable === true, provider: data.provider ?? null, model: data.model ?? null }
   } catch {
-    return false
+    return { reachable: false, aiAvailable: false, provider: null, model: null }
   }
+}
+
+export interface ExtractedOpportunity {
+  university: string; department: string; programme: string; title: string; description: string
+  supervisor: string; researchArea: string; entryRequirements: string; englishRequirement: string
+  fundingDescription: string; stipendDescription: string; deadline: string; startDate: string
+  requiredDocuments: string[]
+}
+
+export async function extractOpportunity(base: string, input: { url: string; university: string; programme: string }) {
+  const res = await fetch(`${base.replace(/\/$/, '')}/extract-opportunity`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(input),
+  })
+  const data = await res.json() as { error?: string; sourceUrl?: string; retrievedAt?: string; note?: string; extracted?: ExtractedOpportunity }
+  if (!res.ok) throw new Error(data.error || `Backend error ${res.status}`)
+  if (!data.extracted || !data.sourceUrl || !data.retrievedAt) throw new Error('Backend returned incomplete opportunity data.')
+  return data as { sourceUrl: string; retrievedAt: string; note: string; extracted: ExtractedOpportunity }
 }
 
 export async function generateWithBackend(base: string, req: DocRequest | Record<string, unknown>): Promise<string> {
@@ -90,7 +111,11 @@ export async function generateWithBackend(base: string, req: DocRequest | Record
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(req),
   })
-  if (!res.ok) throw new Error(`Backend error ${res.status}: ${await res.text()}`)
+  if (!res.ok) {
+    let message = `Backend error ${res.status}`
+    try { message = ((await res.json()) as { error?: string }).error || message } catch { /* Keep the stable HTTP fallback. */ }
+    throw new Error(message)
+  }
   const data = (await res.json()) as { text?: string }
   if (!data.text) throw new Error('Backend returned no text')
   return data.text

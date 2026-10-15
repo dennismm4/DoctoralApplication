@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": { "node": ">=20" },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -16,6 +17,7 @@
     "typecheck": "tsc -b && tsc -p tsconfig.node-tools.json"
   },
   "dependencies": {
+    "@google/genai": "^2.29.1",
     "docx": "^9.11.0",
     "jspdf": "^4.2.1",
     "mammoth": "^1.13.0",

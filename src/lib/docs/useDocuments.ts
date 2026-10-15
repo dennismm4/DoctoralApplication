@@ -22,10 +22,10 @@ export function topicFor(topics: TopicProposal[], opId: string, topicId?: string
 }
 
 /** Template first; then, if a backend is configured, let it improve the prose of the same content. */
-async function run(args: BuildArgs, apiBase: string): Promise<{ result: GenResult; generator: 'template' | 'ai'; notice: string | null }> {
+async function run(args: BuildArgs, apiBase: string, allowAiDataTransfer: boolean): Promise<{ result: GenResult; generator: 'template' | 'ai'; notice: string | null }> {
   const ctx = contextFor(args)
   const template = generate(ctx)
-  if (!apiBase) return { result: template, generator: 'template', notice: null }
+  if (!apiBase || !allowAiDataTransfer) return { result: template, generator: 'template', notice: apiBase && !allowAiDataTransfer ? 'Gemini is off. Enable the explicit data-sharing option in Data & Privacy to send selected profile facts for AI drafting.' : null }
   try {
     const text = await generateWithBackend(apiBase, buildDocRequest(ctx, template))
     return { result: { ...template, content: text, changes: ['AI-improved wording via your backend, built on the template below; checked by the factual audit.', ...template.changes] }, generator: 'ai', notice: null }
@@ -54,7 +54,7 @@ export function useDocumentActions() {
   const create = async (kind: DocKind, op: Opportunity, o: CreateOptions): Promise<{ id: string | null; notice: string | null }> => {
     const args = argsFor(kind, op, o)
     if (!args) return { id: null, notice: 'Approve your master CV first.' }
-    const { result, generator, notice } = await run(args, settings.apiBase)
+    const { result, generator, notice } = await run(args, settings.apiBase, settings.allowAiDataTransfer)
     const doc = newDocument({ ...args, wordLimit: o.wordLimit }, result, generator)
     if (!o.wordLimit && args.wordLimit) doc.wordLimit = args.wordLimit
     setDocs((d) => [doc, ...d])
@@ -66,7 +66,7 @@ export function useDocumentActions() {
     const args = argsFor(doc.kind, op, { target: doc.target, wordLimit: doc.wordLimit, question: doc.question, topicId: doc.topicId })
     if (!args) return 'Approve your master CV first.'
     if (doc.opportunityId !== op.id) return 'A document can only be regenerated for its own opportunity.'
-    const { result, generator, notice } = await run(args, settings.apiBase)
+    const { result, generator, notice } = await run(args, settings.apiBase, settings.allowAiDataTransfer)
     const updated = addVersion(doc, version(0, result, generator, args.master.approvedAt, 'Regenerated'))
     setDocs((ds) => ds.map((d) => (d.id === doc.id ? updated : d)))
     return notice

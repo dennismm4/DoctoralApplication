@@ -7,12 +7,13 @@ import { migrateDocs } from './docs/documents'
 import { applyManualChecks } from './verification'
 import { defaultProfile, normalizeProfile, uid } from './profile'
 import { validateOpportunity } from './validate'
+import { LEGACY_STORAGE_KEY, STORAGE_SCHEMA_VERSION, preserveCurrentRaw, readStoredState } from './storageMigration'
 
 /**
- * All personal data lives in this browser's localStorage only.
- * Nothing is sent to the repository or any server unless the applicant connects a backend.
+ * Browser localStorage remains the working copy. Remote account transfer is
+ * performed only from Data & Privacy after explicit applicant consent.
  */
-const KEY = 'doctoral-compass:v1'
+const KEY = LEGACY_STORAGE_KEY
 
 export interface AppState {
   profile: Profile
@@ -28,7 +29,8 @@ export interface AppState {
   checks: Record<string, ManualCheck[]>
   /** Deadline alert ids the applicant has dismissed. */
   dismissedAlerts: string[]
-  settings: { showDemo: boolean; apiBase: string; browserAlerts: boolean }
+  settings: { showDemo: boolean; apiBase: string; browserAlerts: boolean; allowAiDataTransfer: boolean }
+  schemaVersion?: number
 }
 
 const initial = (): AppState => ({
@@ -42,23 +44,25 @@ const initial = (): AppState => ({
   customOpportunities: [],
   checks: {},
   dismissedAlerts: [],
-  settings: { showDemo: false, apiBase: import.meta.env.VITE_API_BASE_URL ?? '', browserAlerts: false },
+  settings: { showDemo: false, apiBase: import.meta.env.VITE_API_BASE_URL ?? '', browserAlerts: false, allowAiDataTransfer: false },
+  schemaVersion: STORAGE_SCHEMA_VERSION,
 })
 
-function load(): AppState {
+function load(): { state: AppState; canPersist: boolean; warning: string | null } {
   try {
-    const raw = localStorage.getItem(KEY)
-    if (!raw) return initial()
-    const parsed = JSON.parse(raw)
-    return {
+    const result = readStoredState(localStorage)
+    if (!result.state) return { state: initial(), canPersist: result.canPersist, warning: result.warning }
+    const parsed = result.state
+    return { state: {
       ...initial(),
       ...parsed,
       profile: normalizeProfile(parsed.profile),
-      docs: migrateDocs(parsed.docs ?? [], [...(active as Opportunity[]), ...(archived as Opportunity[])]),
+      docs: migrateDocs(Array.isArray(parsed.docs) ? parsed.docs : [], [...(active as Opportunity[]), ...(archived as Opportunity[])]),
       settings: { ...initial().settings, ...parsed.settings },
-    }
+      schemaVersion: STORAGE_SCHEMA_VERSION,
+    }, canPersist: result.canPersist, warning: result.warning }
   } catch {
-    return initial()
+    return { state: initial(), canPersist: false, warning: 'Saved data could not be loaded. Editing is paused so the existing record will not be overwritten.' }
   }
 }
 
@@ -71,6 +75,8 @@ interface Store extends AppState {
   removeCheck: (opportunityId: string, key: ManualCheck['key']) => void
   dismissAlert: (id: string) => void
   storageOk: boolean
+  storageWarning: string | null
+  saveStatus: 'saving' | 'saved' | 'error' | 'protected'
   setProfile: (p: Profile) => void
   upsertApplication: (opportunityId: string, patch?: Partial<Application>) => Application
   updateApplication: (id: string, patch: Partial<Application>) => void
@@ -90,17 +96,26 @@ interface Store extends AppState {
 const Ctx = createContext<Store | null>(null)
 
 export function StoreProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<AppState>(load)
+  const [loaded] = useState(load)
+  const [state, setState] = useState<AppState>(loaded.state)
+  const [canPersist, setCanPersist] = useState(loaded.canPersist)
+  const [storageWarning, setStorageWarning] = useState<string | null>(loaded.warning)
   const [storageOk, setStorageOk] = useState(true)
+  const [saveStatus, setSaveStatus] = useState<'saving' | 'saved' | 'error' | 'protected'>(loaded.canPersist ? 'saving' : 'protected')
 
   useEffect(() => {
     try {
-      localStorage.setItem(KEY, JSON.stringify(state))
+      if (!canPersist) { setSaveStatus('protected'); return }
+      setSaveStatus('saving')
+      localStorage.setItem(KEY, JSON.stringify({ ...state, schemaVersion: STORAGE_SCHEMA_VERSION }))
       setStorageOk(true)
+      setSaveStatus('saved')
     } catch {
       setStorageOk(false)
+      setSaveStatus('error')
+      setStorageWarning('Browser storage could not save your latest changes. Export a backup before closing this tab.')
     }
-  }, [state])
+  }, [state, canPersist])
 
   const patch = useCallback((fn: (s: AppState) => AppState) => setState((s) => fn(s)), [])
 
@@ -158,11 +173,23 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       },
       removeCustomOpportunity: (id) => patch((s) => ({ ...s, customOpportunities: s.customOpportunities.filter((o) => o.id !== id) })),
       setSettings: (p) => patch((s) => ({ ...s, settings: { ...s.settings, ...p } })),
-      replaceAll: (next) => setState({ ...initial(), ...next, profile: normalizeProfile(next.profile), docs: migrateDocs(next.docs ?? [], published) }),
-      reset: () => setState(initial()),
+      replaceAll: (next) => {
+        if (!preserveCurrentRaw(localStorage)) throw new Error('Could not create a backup of current data; import was cancelled.')
+        setState({ ...initial(), ...next, profile: normalizeProfile(next.profile), docs: migrateDocs(next.docs ?? [], published), settings: { ...initial().settings, ...next.settings, allowAiDataTransfer: false }, schemaVersion: STORAGE_SCHEMA_VERSION })
+        setCanPersist(true)
+        setStorageWarning(null)
+      },
+      reset: () => {
+        if (!preserveCurrentRaw(localStorage)) throw new Error('Could not create a backup of current data; deletion was cancelled.')
+        setState(initial())
+        setCanPersist(true)
+        setStorageWarning(null)
+      },
       storageOk,
+      storageWarning,
+      saveStatus,
     } as Store
-  }, [state, patch, storageOk])
+  }, [state, patch, storageOk, storageWarning, canPersist, saveStatus])
 
   return <Ctx.Provider value={store}>{children}</Ctx.Provider>
 }

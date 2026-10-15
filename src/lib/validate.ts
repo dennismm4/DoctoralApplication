@@ -2,7 +2,7 @@ import type { Opportunity } from '../types'
 
 const TRI = ['yes', 'no', 'unknown']
 const COVERAGE = ['full-international', 'home-plus-waiver', 'home-only', 'partial', 'none', 'unknown']
-const MODELS = ['studentship', 'scholarship', 'dtp', 'cdt', 'combination', 'self-funded']
+const MODELS = ['studentship', 'scholarship', 'dtp', 'cdt', 'combination', 'self-funded', 'unknown']
 const FIELDS = ['eligibility.international', 'eligibility.ethiopian', 'tuition', 'stipend', 'duration', 'deadline', 'entry', 'english', 'separateApplication', 'supervisorContact', 'documents']
 const SOURCE_TYPES = ['official', 'official-pdf', 'third-party', 'search-snippet']
 const STEP_TYPES = ['scholarship', 'admissions', 'internal', 'final-form', 'interview', 'outcome', 'other']

@@ -26,7 +26,12 @@ describe('topic approval gate', () => {
   it('refuses to build a concept note from an unapproved topic', () => {
     const t: TopicProposal = suggestTopics(defaultProfile(), op)[0]
     expect(() => generateConceptNote(t, defaultProfile(), op)).toThrow(/approved/)
-    expect(generateConceptNote({ ...t, status: 'approved' }, defaultProfile(), op)).toContain('CONCEPT NOTE')
+    const draft = generateConceptNote({ ...t, status: 'approved' }, defaultProfile(), op)
+    expect(draft).toContain('CONCEPT NOTE')
+    expect(draft).toContain('DRAFT FOR APPLICANT REVIEW')
+    expect(draft).toContain('sampling frame')
+    expect(draft).toContain('References')
+    expect(draft).toContain('No source has been retrieved or verified')
   })
 })
 

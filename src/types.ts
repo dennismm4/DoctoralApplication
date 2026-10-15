@@ -9,7 +9,7 @@ export type TuitionCoverage =
   | 'none'
   | 'unknown'
 
-export type FundingModel = 'studentship' | 'scholarship' | 'dtp' | 'cdt' | 'combination' | 'self-funded'
+export type FundingModel = 'studentship' | 'scholarship' | 'dtp' | 'cdt' | 'combination' | 'self-funded' | 'unknown'
 
 export interface Source {
   label: string
@@ -72,6 +72,8 @@ export interface Opportunity {
   archiveReason?: string
   title: string
   university: string
+  /** Optional project summary for browser-added opportunity drafts. */
+  description?: string
   department: string | null
   programme: string | null
   subjects: string[]

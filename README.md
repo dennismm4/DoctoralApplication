@@ -173,25 +173,49 @@ npm run build
 
 1. Push to the `main` branch of a GitHub repository.
 2. **Settings → Pages → Source: GitHub Actions.**
-3. `ci.yml` type-checks, validates the data, runs the offline pipeline and the tests, builds and deploys to `https://<user>.github.io/<repo>/` (relative paths + hash routing, no extra config).
-4. `discovery.yml` needs **Settings → Actions → General → Workflow permissions: Read and write** so it can open the review issue.
+3. `.github/workflows/deploy.yml` installs with pnpm, builds and deploys to `https://<user>.github.io/<repo>/` (relative paths + hash routing).
 
 > Never commit a CV, a data backup, a verification patch containing personal notes, or any `.env` file to a public repository.
 
+## Remote account storage (optional; use across laptops)
+
+The app can store a private copy of applicant data in Supabase so the same account can move it between devices. Local browser storage remains active as a recovery copy. Sign-in alone never transfers data: the applicant must check the consent box and explicitly upload or download. This first version uses deliberate, manual transfers rather than background synchronization, so it cannot silently overwrite newer data from another laptop. After making edits, upload from that device; on another device, check the cloud timestamp before downloading. Download creates a raw local recovery backup before replacing the browser's app data.
+
+The remote record includes the applicant profile, CV text, master CV, documents and versions, application tracker, checklist confirmations, settings, and browser-added opportunities. It does not include the published opportunity dataset or Gemini API key. Supabase stores the record as JSONB associated with the authenticated account. Supabase Auth and row-level security restrict each row to its owner. The browser uses only the Supabase project URL and anon/public key; never use a service-role key in Vite, GitHub Pages, or this app. Data is not end-to-end encrypted by this app, so use a trusted account password and avoid shared devices.
+
+### One-time Supabase setup
+
+1. Create a Supabase project and enable email/password sign-in in **Authentication → Providers**. Choose whether to require email confirmation.
+2. In **SQL Editor**, run [`supabase/schema.sql`](supabase/schema.sql). This creates the private per-user table and row-level security policy.
+3. In **Project Settings → API**, copy the Project URL and the anon/public key. Do not copy the service-role key.
+4. In the GitHub repository, open **Settings → Secrets and variables → Actions → Variables** and add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`. These values are public browser configuration; access control comes from authentication and the SQL policy.
+5. Push the frontend changes to `main` or run the Pages workflow manually. GitHub Actions builds the public settings into the site. Visit Data & Privacy on the deployed URL, create an account, verify the email if required, and sign in.
+6. On the laptop with existing local data, export a JSON backup first, sign in, check the consent box, then choose **Upload this device to cloud**. On another laptop, sign in with the same account, check consent, check the cloud copy timestamp, and choose **Download cloud copy to this device**. Download replaces that browser's current state after preserving its raw record.
+
+If signup or API calls fail, verify that the URL and anon key are correct, the SQL ran successfully, the table policy is enabled, and the GitHub Pages workflow was rebuilt after variables were added. Supabase email confirmation and redirect URLs must include the deployed GitHub Pages origin in **Authentication → URL Configuration**. Local development can use a `.env.local` file based on `.env.example` (never commit it).
+
 ## Optional AI drafting backend
 
-GitHub Pages cannot hold secrets, so AI drafting goes through `server/index.mjs` (dependency-free Node 18+), deployed separately. It accepts requests only from `ALLOWED_ORIGIN`, rate-limits by IP, forbids invented facts in its system prompt, and refuses concept notes without an approved topic. The frontend sends only verified profile facts. Without it, the app runs in clearly labelled template mode.
+GitHub Pages cannot hold secrets or run the backend. Deploy `server/index.mjs` separately to a Node.js 20+ host (for example Render, Railway, Fly.io, or a private server). The service uses Google's official `@google/genai` SDK and the current Interactions API. The model is selected with `GEMINI_MODEL` (default `gemini-3.8-flash`). It applies request-size limits, an hourly per-IP limit, CORS origin checks, does not log prompts, and does not store applicant data. A missing key, quota issue, or backend failure leaves local template drafting available and labelled as demo mode.
+
+For a Render-style Node web service, use the repository root as the service root, set the start command to `node server/index.mjs`, and install dependencies with `pnpm install --frozen-lockfile`. Configure these values in the backend host's environment dashboard:
 
 | Variable | Where | Secret? | Purpose |
 |---|---|---|---|
 | `VITE_API_BASE_URL` | Frontend build (repo *variable*) | No — public | Backend URL; empty = demo mode |
-| `ANTHROPIC_API_KEY` | Server only | **Yes** | Provider key |
-| `ALLOWED_ORIGIN` | Server | No | Pages origin allowed by CORS |
-| `ANTHROPIC_MODEL`, `PORT`, `RATE_LIMIT_PER_HOUR` | Server | No | Optional |
+| `GEMINI_API_KEY` | Backend host only | **Yes** | Create in Google AI Studio; never add to GitHub Pages or `VITE_*` variables |
+| `ALLOWED_ORIGIN` | Backend host | No | Exact site origin, e.g. `https://username.github.io` (no repository path) |
+| `GEMINI_MODEL`, `PORT`, `RATE_LIMIT_PER_HOUR` | Backend host | No | Optional; model defaults to `gemini-3.8-flash` |
+
+For the frontend build, set the public repository variable `VITE_API_BASE_URL` to the backend's HTTPS base URL and rebuild/redeploy Pages. Do not put `GEMINI_API_KEY` in a GitHub Actions variable used by the Vite build. Leave `VITE_API_BASE_URL` empty to use only local templates. The backend health check reports whether Gemini is configured; it never returns the key.
+
+Opportunity intake is review-first. The backend fetches a public HTTPS page and asks Gemini to extract a structured draft. The app stores the source URL and retrieval time, but funding and eligibility remain unknown until the applicant verifies them from the official source. If retrieval or AI is unavailable, use manual entry or the existing JSON import workflow.
 
 ## Privacy
 
-The profile, CV text, drafts, tracker and checklist confirmations live in this browser's localStorage only. They are lost if site data is cleared and readable by anyone using the browser profile. Export backups regularly and keep them private.
+The profile, CV text, drafts, tracker and checklist confirmations live in this browser's localStorage by default. They are transferred to Supabase only after sign-in, an explicit consent checkbox, and a deliberate upload/download action. The app does not background-sync or silently upload them. Gemini drafting is off until the applicant enables the separate consent checkbox in Data & Privacy. When she then requests a draft, only the verified facts selected for that document, selected public opportunity details, and template draft are sent to the configured backend. URL extraction sends the URL and optional university/programme text to the backend; retrieved page text is sent to Gemini. The service does not persist or log these values.
+
+The app retains the `doctoral-compass:v1` storage key and upgrades its contents in place. Before migrating the legacy schema, it keeps the original raw JSON in `doctoral-compass:backup:v1-before-v2`; it does not clear browser storage. If stored data is malformed or from a newer schema, writes pause so it cannot be replaced by defaults, and Data & Privacy offers a raw recovery export. JSON backups are versioned. Imports are validated, require confirmation, and save a raw copy of current data before replacement. Export backups regularly and keep them private. Imported data is not sent to the backend.
 
 ## Project structure
 
@@ -208,8 +232,9 @@ scripts/discovery/sources.json     funding sources to monitor
 scripts/discover.ts                discovery + refresh pipeline
 scripts/archive.ts                 move expired records to the archive
 scripts/discovery/fixtures/        ILLUSTRATIVE fixture pages for offline tests
-.github/workflows/ci.yml           validate, test, build, deploy
-.github/workflows/discovery.yml    weekly discovery report
+.github/workflows/deploy.yml       GitHub Pages build and deployment
+src/lib/storageMigration.ts        versioned, backed-up local data migration
+server/index.mjs                   Gemini drafting and official-page extraction API
 docs/DATA_SCHEMA.md                schema, evidence rules, verdict order
 ```
 
@@ -222,4 +247,5 @@ docs/DATA_SCHEMA.md                schema, evidence rules, verdict order
 - The discovery pipeline produces **leads**: a human still reads each page. The extractor is keyword-based and will miss unusual wording.
 - It could not be run live from the build environment (no outbound access to university sites); it runs live in GitHub Actions and was tested here against labelled fixtures.
 - Some university pages block automated fetching; those appear under "Could not fetch".
+- Gemini opportunity extraction is a review aid, not verification. The app stores the source and retrieval time, leaves funding and eligibility gates unknown, and requires the applicant to check every field. The concept-note scaffold does not retrieve scholarly literature; its bibliography remains a prompt for sources the applicant has read and verified.
 - Degree equivalence (Ethiopian CGPA → UK classification) is not calculated. She confirms it in the checklist against each university's country page.

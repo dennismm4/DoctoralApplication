@@ -37,13 +37,15 @@ export default function Topics() {
     const topicOp = opportunities.find((o) => o.id === t.opportunityId) ?? null
     let content = generateConceptNote(t, profile, topicOp)
     let generator: 'template' | 'ai' = 'template'
-    if (settings.apiBase && topicOp) {
+    if (settings.apiBase && settings.allowAiDataTransfer && topicOp) {
       try {
         content = await generateWithBackend(settings.apiBase, { kind: 'concept-note', kindLabel: 'Concept note', target: 'programme', wordLimit: null, facts: legacyFacts(profile).map((text, i) => ({ id: String(i), text })), opportunity: { title: topicOp.title, university: topicOp.university, themes: topicOp.themes }, topic: { title: t.title, questions: t.questions, rationale: t.rationale, contribution: t.contribution }, templateDraft: content, rules: DRAFTING_RULES })
         generator = 'ai'
       } catch (e) {
         setError(`Backend unavailable — used the local template instead. (${(e as Error).message})`)
       }
+    } else if (settings.apiBase && !settings.allowAiDataTransfer && topicOp) {
+      setError('Gemini is off. The concept note used the local template. Enable data sharing in Data & Privacy to send selected profile facts for AI drafting.')
     }
     const doc = simpleDocument({ kind: 'concept-note', op: topicOp, title: `Concept note — ${t.title}`, content, generator, topicId: t.id })
     const id = doc.id

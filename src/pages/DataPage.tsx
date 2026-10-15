@@ -1,18 +1,73 @@
 import { useState } from 'react'
 import { Button, Callout, Card, Field, Input, PageHeader, SectionTitle } from '../components/ui'
 import { checkBackend } from '../lib/ai'
-import { downloadJson } from '../lib/exporter'
+import { downloadJson, downloadText } from '../lib/exporter'
 import { useStore, type AppState } from '../lib/store'
+import { exportEnvelope, exportRecoveryRaw, validateBackup } from '../lib/storageMigration'
+import { extractOpportunity as requestOpportunityExtraction, type ExtractedOpportunity } from '../lib/ai'
+import { makeUnverifiedOpportunity } from '../lib/opportunityDraft'
 import { Badge, LinkOut } from '../components/ui'
 import registry from '../../scripts/discovery/sources.json'
+import { deleteRemoteState, getRemoteSession, readRemoteState, remoteSyncConfigured, signInRemote, signOutRemote, writeRemoteState, type RemoteSession } from '../lib/remoteSync'
 
 export default function DataPage() {
   const store = useStore()
-  const { settings, setSettings, customOpportunities, addCustomOpportunities, removeCustomOpportunity, opportunities, replaceAll, reset } = store
+  const { settings, setSettings, customOpportunities, addCustomOpportunities, removeCustomOpportunity, opportunities, replaceAll, reset, upsertApplication } = store
   const [apiBase, setApiBase] = useState(settings.apiBase)
-  const [backendState, setBackendState] = useState<'idle' | 'ok' | 'fail'>('idle')
+  const [backendState, setBackendState] = useState<'idle' | 'gemini' | 'demo' | 'fail'>('idle')
+  const [backendModel, setBackendModel] = useState('')
   const [importMsg, setImportMsg] = useState<{ tone: 'ok' | 'bad'; text: string } | null>(null)
   const [oppMsg, setOppMsg] = useState<{ added: number; errors: string[] } | null>(null)
+  const [sourceUrl, setSourceUrl] = useState('')
+  const [universityInput, setUniversityInput] = useState('')
+  const [programmeInput, setProgrammeInput] = useState('')
+  const [reviewFields, setReviewFields] = useState<ExtractedOpportunity | null>(null)
+  const [retrievedAt, setRetrievedAt] = useState('')
+  const [extracting, setExtracting] = useState(false)
+  const [intakeMsg, setIntakeMsg] = useState('')
+  const [remoteSession, setRemoteSession] = useState<RemoteSession | null>(() => getRemoteSession())
+  const [remoteEmail, setRemoteEmail] = useState('')
+  const [remotePassword, setRemotePassword] = useState('')
+  const [remoteConsent, setRemoteConsent] = useState(false)
+  const [remoteBusy, setRemoteBusy] = useState(false)
+  const [remoteMsg, setRemoteMsg] = useState('')
+  const [remoteRecord, setRemoteRecord] = useState<{ state: AppState; updatedAt: string } | null>(null)
+
+  const extractFromPage = async () => {
+    setExtracting(true)
+    setIntakeMsg('')
+    try {
+      const result = await requestOpportunityExtraction(apiBase.trim(), { url: sourceUrl.trim(), university: universityInput.trim(), programme: programmeInput.trim() })
+      setReviewFields(result.extracted)
+      setSourceUrl(result.sourceUrl)
+      setUniversityInput(result.extracted.university || universityInput)
+      setProgrammeInput(result.extracted.programme || programmeInput)
+      setRetrievedAt(result.retrievedAt)
+      setIntakeMsg(result.note)
+    } catch (e) {
+      setIntakeMsg(`${(e as Error).message} You can still enter the details manually below.`)
+    } finally { setExtracting(false) }
+  }
+
+  const saveReviewedOpportunity = () => {
+    if (!reviewFields || !/^https:\/\//i.test(sourceUrl.trim()) || !universityInput.trim() || !reviewFields.title.trim()) {
+      setIntakeMsg('Add an HTTPS source URL, university, and project title before saving.')
+      return
+    }
+    const input = { ...reviewFields, university: universityInput.trim(), programme: programmeInput.trim() || reviewFields.programme }
+    const record = makeUnverifiedOpportunity(input, sourceUrl.trim(), retrievedAt || new Date().toISOString(), { university: universityInput.trim(), programme: programmeInput.trim() || null })
+    const result = addCustomOpportunities([record])
+    setOppMsg(result)
+    if (result.added) {
+      upsertApplication(record.id)
+      setIntakeMsg('Saved to your local review queue. Eligibility and funding remain unverified.')
+      setReviewFields(null)
+      setSourceUrl('')
+      setUniversityInput('')
+      setProgrammeInput('')
+      setRetrievedAt('')
+    }
+  }
 
   const snapshot = (): AppState => ({
     profile: store.profile,
@@ -38,14 +93,46 @@ export default function DataPage() {
       }))
   const patchCount = verificationPatch().length
 
+  const connectRemote = async (createAccount: boolean) => {
+    setRemoteBusy(true); setRemoteMsg('')
+    try {
+      const session = await signInRemote(remoteEmail.trim(), remotePassword, createAccount)
+      setRemoteSession(session)
+      setRemotePassword('')
+      setRemoteMsg(createAccount ? 'Account created. If email confirmation is enabled, confirm your address and sign in.' : `Signed in as ${session.user.email ?? remoteEmail.trim()}. Your browser data has not been uploaded.`)
+      if (!createAccount) setRemoteRecord(await readRemoteState())
+    } catch (e) { setRemoteMsg((e as Error).message) } finally { setRemoteBusy(false) }
+  }
+
+  const downloadRemote = async () => {
+    if (!remoteConsent) { setRemoteMsg('Check the consent box before transferring applicant data.'); return }
+    if (!remoteRecord) { setRemoteMsg('There is no cloud record to download.'); return }
+    if (!confirm('Replace the data in this browser with the cloud copy? A raw backup of this browser record will be created first.')) return
+    setRemoteBusy(true)
+    try { replaceAll(remoteRecord.state); setRemoteMsg('Cloud data loaded. This browser now has a local copy; changes are not uploaded automatically.') }
+    catch (e) { setRemoteMsg((e as Error).message) } finally { setRemoteBusy(false) }
+  }
+
+  const uploadRemote = async () => {
+    if (!remoteConsent) { setRemoteMsg('Check the consent box before transferring applicant data.'); return }
+    if (!confirm(`Upload this browser's profile, CV, drafts, opportunity records, and tracker to the private account ${remoteSession?.user.email ?? ''}? This replaces that account's current cloud copy.`)) return
+    setRemoteBusy(true)
+    try {
+      const updatedAt = await writeRemoteState(snapshot())
+      setRemoteRecord({ state: snapshot(), updatedAt })
+      setRemoteMsg(`Uploaded successfully at ${new Date(updatedAt).toLocaleString()}.`)
+    } catch (e) { setRemoteMsg((e as Error).message) } finally { setRemoteBusy(false) }
+  }
+
   const importBackup = async (file?: File) => {
     if (!file) return
     try {
       const data = JSON.parse(await file.text())
-      if (!data.profile || !Array.isArray(data.applications)) throw new Error('Not a Doctoral Compass backup file.')
-      if (confirm('Replace all data in this browser with the backup?')) {
-        replaceAll(data)
-        setImportMsg({ tone: 'ok', text: 'Backup restored.' })
+      const validated = validateBackup(data)
+      if (!validated.valid) throw new Error(validated.error)
+      if (confirm('Replace all data in this browser with the backup? The current raw data will be backed up first.')) {
+        replaceAll(validated.state as AppState)
+        setImportMsg({ tone: 'ok', text: 'Backup restored. Gemini data-sharing consent is off on this device; enable it separately if you want AI drafting.' })
       }
     } catch (e) {
       setImportMsg({ tone: 'bad', text: (e as Error).message })
@@ -67,26 +154,75 @@ export default function DataPage() {
       <PageHeader eyebrow="Settings" title="Data & Privacy" />
 
       <div className="grid gap-8 lg:grid-cols-2">
+        <section className="lg:col-span-2">
+          <SectionTitle>Use your data on multiple devices</SectionTitle>
+          <Card className="space-y-4 p-4">
+            {!remoteSyncConfigured ? <Callout tone="warn" title="Remote storage needs setup">Create a Supabase project and add <code>VITE_SUPABASE_URL</code> and <code>VITE_SUPABASE_ANON_KEY</code> to the GitHub Actions repository variables, then redeploy. Setup steps are in the README.</Callout> : <p className="text-sm text-muted">Sign in on each laptop using the same account. Data transfer is manual and requires your consent; signing in never uploads or replaces data by itself. The cloud copy contains the profile, CV text, drafts, tracker, and custom opportunities.</p>}
+            {!remoteSession ? <>
+              <div className="grid gap-3 md:grid-cols-2">
+                <Field label="Email"><Input type="email" autoComplete="email" value={remoteEmail} onChange={(e) => setRemoteEmail(e.target.value)} /></Field>
+                <Field label="Password"><Input type="password" autoComplete="current-password" value={remotePassword} onChange={(e) => setRemotePassword(e.target.value)} /></Field>
+              </div>
+              <div className="flex flex-wrap gap-2"><Button variant="primary" disabled={!remoteSyncConfigured || remoteBusy || !remoteEmail || !remotePassword} onClick={() => connectRemote(false)}>{remoteBusy ? 'Connecting…' : 'Sign in'}</Button><Button disabled={!remoteSyncConfigured || remoteBusy || !remoteEmail || remotePassword.length < 8} onClick={() => connectRemote(true)}>Create account</Button></div>
+            </> : <>
+              <div className="flex flex-wrap items-center justify-between gap-3"><p className="text-sm text-ok">Signed in as {remoteSession.user.email ?? remoteEmail}</p><Button onClick={() => { signOutRemote(); setRemoteSession(null); setRemoteRecord(null); setRemoteMsg('Signed out.') }}>Sign out</Button></div>
+              <label className="flex items-start gap-2 text-sm"><input type="checkbox" className="mt-0.5 accent-forest" checked={remoteConsent} onChange={(e) => setRemoteConsent(e.target.checked)} /><span><strong>I consent to transferring my applicant data to my private remote account.</strong> The cloud provider stores it on its servers; use a unique password and sign out on shared devices. I understand that upload replaces the account's previous copy, while download replaces this browser's copy after making a recovery backup.</span></label>
+              <div className="flex flex-wrap gap-2"><Button variant="primary" disabled={remoteBusy || !remoteConsent} onClick={uploadRemote}>Upload this device to cloud</Button><Button disabled={remoteBusy || !remoteConsent || !remoteRecord} onClick={downloadRemote}>Download cloud copy to this device</Button><Button disabled={remoteBusy} onClick={async () => { setRemoteBusy(true); try { setRemoteRecord(await readRemoteState()); setRemoteMsg('Cloud record checked.') } catch (e) { setRemoteMsg((e as Error).message) } finally { setRemoteBusy(false) } }}>Check cloud copy</Button><Button variant="danger" disabled={remoteBusy || !remoteRecord} onClick={async () => { if (!confirm('Permanently delete the remote data copy for this account? Your browser data will not be affected.')) return; setRemoteBusy(true); try { await deleteRemoteState(); setRemoteRecord(null); setRemoteMsg('Remote data deleted. Local browser data remains unchanged.') } catch (e) { setRemoteMsg((e as Error).message) } finally { setRemoteBusy(false) } }}>Delete cloud copy</Button></div>
+              <p className="text-xs text-muted">{remoteRecord ? `Cloud copy last updated ${new Date(remoteRecord.updatedAt).toLocaleString()}.` : 'No cloud copy has been checked or created yet.'} After editing on a device, upload the latest data; on another device, check then download it. Downloads preserve a recovery copy first.</p>
+            </>}
+            {remoteMsg && <p className="text-sm" role="status">{remoteMsg}</p>}
+          </Card>
+        </section>
+        <section className="lg:col-span-2">
+          <SectionTitle>Add a university or PhD opportunity</SectionTitle>
+          <Card className="space-y-4 p-4">
+            <p className="text-sm text-muted">Enter an official HTTPS URL, university and programme. With Gemini connected, the backend retrieves the public page and sends that page text and your entry to Gemini for a review draft; your saved applicant profile is not included. The draft is never treated as evidence of funding or eligibility.</p>
+            <div className="grid gap-3 md:grid-cols-3">
+              <Field label="Official opportunity URL"><Input value={sourceUrl} onChange={(e) => setSourceUrl(e.target.value)} placeholder="https://university.ac.uk/phd-project" /></Field>
+              <Field label="University"><Input value={universityInput} onChange={(e) => setUniversityInput(e.target.value)} placeholder="University name" /></Field>
+              <Field label="Programme"><Input value={programmeInput} onChange={(e) => setProgrammeInput(e.target.value)} placeholder="PhD programme" /></Field>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Button variant="primary" onClick={extractFromPage} disabled={extracting || !sourceUrl.trim() || !apiBase.trim()}>{extracting ? 'Retrieving page…' : 'Retrieve and extract with Gemini'}</Button>
+              {!reviewFields && <Button onClick={() => setReviewFields({ university: universityInput, department: '', programme: programmeInput, title: '', description: '', supervisor: '', researchArea: '', entryRequirements: '', englishRequirement: '', fundingDescription: '', stipendDescription: '', deadline: '', startDate: '', requiredDocuments: [] })}>Enter details manually</Button>}
+            </div>
+            {intakeMsg && <Callout tone="warn">{intakeMsg}</Callout>}
+            {reviewFields && <div className="space-y-3 rounded-md border border-line p-4">
+              <div className="flex flex-wrap items-center justify-between gap-2"><strong>Review extracted details</strong><Badge tone="ochre">Needs verification</Badge></div>
+              <p className="text-xs text-muted">Check each value against the source page. Funding, international eligibility, stipend, dates, and requirements are saved as unverified details.</p>
+              <div className="grid gap-3 md:grid-cols-2">
+                {(['title','university','department','programme','supervisor','researchArea','entryRequirements','englishRequirement','fundingDescription','stipendDescription','deadline','startDate'] as const).map((key) => <Field key={key} label={key.replace(/[A-Z]/g, (m) => ` ${m.toLowerCase()}`)}><Input value={key === 'university' ? universityInput : key === 'programme' ? programmeInput : reviewFields[key]} onChange={(e) => { if (key === 'university') setUniversityInput(e.target.value); else if (key === 'programme') setProgrammeInput(e.target.value); setReviewFields((f) => f ? { ...f, [key]: e.target.value } : f) }} /></Field>)}
+              </div>
+              <Field label="Project description"><textarea className="min-h-28 w-full rounded-md border border-line-strong bg-surface px-3 py-2 text-sm" value={reviewFields.description} onChange={(e) => setReviewFields((f) => f ? { ...f, description: e.target.value } : f)} /></Field>
+              <Field label="Required documents (one per line)"><textarea className="min-h-16 w-full rounded-md border border-line-strong bg-surface px-3 py-2 text-sm" value={reviewFields.requiredDocuments.join('\n')} onChange={(e) => setReviewFields((f) => f ? { ...f, requiredDocuments: e.target.value.split('\n').map((x) => x.trim()).filter(Boolean) } : f)} /></Field>
+              <Button variant="primary" onClick={saveReviewedOpportunity}>Approve details and add to review queue</Button>
+            </div>}
+          </Card>
+        </section>
         <section>
           <SectionTitle>Where your data lives</SectionTitle>
           <Callout tone="warn" title="Browser storage — read this">
             <ul className="mt-1 list-inside list-disc space-y-1">
-              <li>Your profile, CV text, drafts and tracker are saved in this browser's <strong>localStorage</strong> on this device only. They are not uploaded to GitHub or any server.</li>
+              <li>Your profile, CV text, drafts and tracker stay in this browser unless you explicitly upload them using Remote storage below. Remote sync requires your consent each time.</li>
               <li>Anyone with access to this browser profile can read them. Avoid shared or public computers.</li>
-              <li>Clearing browser data, private windows, or switching device loses them. <strong>Export a backup regularly.</strong></li>
+              <li>Clearing browser data or using a private window can remove the local copy. Remote account storage lets you move a copy between devices; export a backup regularly.</li>
               <li>Backups are plain JSON — store them somewhere private. Never commit them to a public repository.</li>
-              <li>If you connect a backend, only <em>verified</em> profile facts and the selected opportunity are sent to it when you request a draft.</li>
+              <li>Gemini drafting sends only selected verified facts when requested and separately consented. Remote storage transfers the full selected app snapshot only when you use its upload/download controls.</li>
             </ul>
           </Callout>
           <Card className="mt-4 space-y-3 p-4">
+            <p className={store.saveStatus === 'saved' ? 'text-sm text-ok' : store.saveStatus === 'error' ? 'text-sm text-bad' : 'text-sm text-muted'} role="status">
+              {store.saveStatus === 'saved' ? '✓ Changes saved in this browser.' : store.saveStatus === 'saving' ? 'Saving changes to this browser…' : store.saveStatus === 'protected' ? 'Saving is paused to protect the existing stored record.' : 'Changes could not be saved. Export a backup before closing this tab.'}
+            </p>
             <div className="flex flex-wrap gap-2">
-              <Button variant="primary" onClick={() => downloadJson(`doctoral-compass-backup-${new Date().toISOString().slice(0, 10)}.json`, snapshot())}>Export backup</Button>
+              <Button variant="primary" onClick={() => downloadJson(`doctoral-compass-backup-${new Date().toISOString().slice(0, 10)}.json`, exportEnvelope(snapshot()))}>Export my data</Button>
               <label className="inline-flex cursor-pointer items-center rounded-md border border-line-strong bg-surface px-3.5 py-2 text-sm font-medium hover:border-forest">
                 Restore backup
                 <input type="file" accept="application/json" className="sr-only" onChange={(e) => importBackup(e.target.files?.[0])} />
               </label>
               <Button variant="danger" onClick={() => confirm('Permanently delete ALL your data from this browser? Export a backup first.') && reset()}>Delete all my data</Button>
             </div>
+            {store.storageWarning && <Button variant="ghost" onClick={() => { const raw = exportRecoveryRaw(localStorage); if (raw) downloadText('doctoral-compass-recovery-raw.json', raw) }}>Export raw recovery copy</Button>}
             {importMsg && <p className={importMsg.tone === 'ok' ? 'text-sm text-ok' : 'text-sm text-bad'}>{importMsg.text}</p>}
           </Card>
         </section>
@@ -110,11 +246,16 @@ export default function DataPage() {
               >
                 Save
               </Button>
-              <Button onClick={async () => setBackendState((await checkBackend(apiBase.trim())) ? 'ok' : 'fail')} disabled={!apiBase}>Test connection</Button>
-              {backendState === 'ok' && <span className="text-sm text-ok">✓ Reachable</span>}
+              <Button onClick={async () => { const status = await checkBackend(apiBase.trim()); setBackendState(status.reachable ? status.aiAvailable ? 'gemini' : 'demo' : 'fail'); setBackendModel(status.model || '') }} disabled={!apiBase}>Test connection</Button>
+              {backendState === 'gemini' && <span className="text-sm text-ok">✓ Gemini backend configured{backendModel ? ` (${backendModel})` : ''}. Each draft shows the provider actually used.</span>}
+              {backendState === 'demo' && <span className="text-sm text-muted">Backend reachable; Gemini is not configured, so templates are used.</span>}
               {backendState === 'fail' && <span className="text-sm text-bad">Not reachable (check URL and CORS origin)</span>}
             </div>
-            <p className="text-xs text-muted">Current mode: <strong>{settings.apiBase ? `backend at ${settings.apiBase}` : 'demo (local templates)'}</strong></p>
+            <p className="text-xs text-muted">Current mode: <strong>{backendState === 'gemini' ? 'Gemini AI' : 'demo (local templates)'}</strong>{settings.apiBase ? ` — backend ${settings.apiBase}` : ''}</p>
+            <label className="flex items-start gap-2 border-t border-line pt-3 text-sm">
+              <input type="checkbox" className="mt-0.5 accent-forest" checked={settings.allowAiDataTransfer} onChange={(e) => setSettings({ allowAiDataTransfer: e.target.checked })} />
+              <span><strong>Allow profile facts to be sent for Gemini drafting.</strong> When you request an AI draft, the app sends only the verified profile facts selected for that document, the selected public opportunity details, and its local template draft to the backend. The server does not store or log them. Leave this off to keep drafts entirely in local demo mode. This does not upload your full profile or CV file.</span>
+            </label>
           </Card>
         </section>
 

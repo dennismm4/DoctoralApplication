@@ -30,7 +30,7 @@ CI (`npm run validate-data`) validates all three on every push. The live files m
 | `supervisors` | `{ name, url \| null, themes? }[]` | `themes` improve the supervisor-fit score. |
 | `programmeUrl`, `fundingUrl` | https \| null | |
 | `country` | string | Must be `"United Kingdom"`. |
-| `fundingModel` | `studentship \| scholarship \| dtp \| cdt \| combination \| self-funded` | |
+| `fundingModel` | `studentship \| scholarship \| dtp \| cdt \| combination \| self-funded \| unknown` | `unknown` is used for intake drafts until the funding route is checked. |
 | `eligibility.international`, `eligibility.ethiopian` | Tri | Evidence fields `eligibility.international`, `eligibility.ethiopian`. Use `ethiopian: "yes"` only when the award is open to all non-UK nationalities or names Ethiopia — and say which in the evidence claim. |
 | `eligibility.restrictedTo` | string \| null | Any restriction → not eligible. |
 | `tuition.coverage` | `full-international \| home-plus-waiver \| home-only \| partial \| none \| unknown` | `home-only`/`partial`/`none` → shortfall. |
